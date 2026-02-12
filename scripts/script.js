@@ -1,5 +1,5 @@
 import { fetchGlobal, fetchNews } from "./apis.js";
-import { matchStatus, pageLoader } from "./index.js";
+import { matchStatus, mouseOver, newsCats, pageLoader } from "./index.js";
 
 const score_container = document.getElementById("score_container");
 const news_container = document.getElementById("news_container");
@@ -13,7 +13,6 @@ window.addEventListener("load", () => {
 
 async function renderCurrentMatches() {
   const params = `/v1/currentMatches`;
-
   const currentMatches = await fetchGlobal(params, "current Match");
 
 
@@ -95,16 +94,29 @@ async function renderCurrentMatches() {
 }
 
 if (score_container) renderCurrentMatches();
+let newsController;
+export async function renderNews(cat) {
+  
+  try {
+    if(newsController) newsController.abort();
 
-async function renderNews() {
-  const newses = await fetchNews();
+    newsController = new AbortController()
 
-  const frag = document.createDocumentFragment();
-  news_container.innerHTML = ``
-  newses?.results?.forEach((news, i) => {
-    const article = document.createElement("article");
-    article.className = `flex gap-1 p-2 dark:bg-neutral-700 bg-white dark:text-white shadow-lg transition-all duration-1000 opacity-0 translate-y-5 rounded-md`;
-    article.innerHTML = `
+    const res = await fetch("http://localhost:3000/news/" + cat,{signal:newsController.signal})
+
+    const newses = await res.json();
+    console.log(newses)
+
+    if(!newses.results) {
+      return console.log("no data")
+    }
+
+    const frag = document.createDocumentFragment();
+    news_container.innerHTML = ``
+    newses?.results?.forEach((news, i) => {
+      const article = document.createElement("article");
+      article.className = `flex gap-1 p-2 dark:bg-neutral-700 bg-white dark:text-white shadow-lg transition-all duration-1000 opacity-0 translate-y-5 rounded-md`;
+      article.innerHTML = `
       <div>
         <img
           src="${news.image_url || "/fff.jpg&text=no-img"}"
@@ -122,54 +134,87 @@ async function renderNews() {
         </div>
       </div>
   `
-    frag.append(article);
+      frag.append(article);
 
-    setTimeout(() => {
-      article.classList.remove("opacity-0", "translate-y-5");
-    }, 300 * i);
+      setTimeout(() => {
+        article.classList.remove("opacity-0", "translate-y-5");
+      }, 300 * i);
 
-    article.addEventListener("click", () => {
-      renderNewsDetails(newses?.results?.[i]);
-      document.body.classList.add("overflow-hidden")
+      article.addEventListener("click", () => {
+        renderNewsDetails(newses?.results?.[i]);
+        document.body.classList.add("overflow-hidden")
+      })
+
     })
-
-  })
-  news_container.append(frag)
+    news_container.append(frag)
+    
+  } catch (error) {
+    news_container.innerHTML = `<div>No data</div>`
+    console.error("error in /news api")
+  }
 }
-if (news_container) renderNews()
+
+if (news_container) {
+let value = 'Breaking'
+  renderNews(value.toLowerCase())
+  newsCats(value)
+}
 
 async function renderNewsDetails(news) {
 
   const overlay = document.createElement("div");
-  overlay.className = `fixed inset-0 bg-neutral-950/80 grid place-items-center opacity-0 transition-opacity duration-300 overflow-hidden`;
+  // Enhanced Styling with Glassmorphism and better typography
+  overlay.className = `fixed inset-0 bg-black/60 backdrop-blur-sm grid place-items-center opacity-0 transition-opacity duration-300 z-50 p-4`;
+
   overlay.innerHTML = `
-    <article class="max-w-lg p-3 space-y-2 shadow-lg bg-white dark:bg-neutral-700 dark:text-white rounded-sm transition-all duration-300 opacity-0 translate-y-4 ">
-      <div class="max-w-[80%] mx-auto flex justify-between">
-        <h3 class="font-semibold text-lg">${news?.title || "N/A"}</h3>
-        <span id="closebtn" class="cursor-pointer">✖</span>
+  <article class="relative w-full max-w-xl bg-white dark:bg-neutral-900 shadow-2xl rounded-2xl overflow-hidden transform transition-all duration-300 scale-95 opacity-0 translate-y-4 border border-neutral-200 dark:border-neutral-800">
+    
+    <!-- Close Button -->
+    <button id="closebtn" class="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/80 hover:bg-black/60 dark:bg-white/80 dark:hover:bg-white/20 transition-colors text-neutral-800 dark:text-white">
+      <svg xmlns="http://www.w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Header Image -->
+    <div class="relative h-64 w-full overflow-hidden">
+      <img src="${news.image_url || 'images/fff.jpg&text=no-img'}" alt="" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
+      <div class="absolute bottom-4 left-6 right-6">
+        <span class="inline-block px-3 py-1 mb-2 text-xs font-bold tracking-wider text-white uppercase bg-blue-600 rounded-md">
+          ${news?.category?.[0] || "General"}
+        </span>
+        <h3 class="text-2xl font-bold leading-tight text-white line-clamp-2">${news?.title || "N/A"}</h3>
       </div>
-        <div class="flex justify-between text-black/60 dark:text-white/60 mx-auto max-w-[80%]">
-          <div>
-            <p>
-              <span class="font-semibold">Author: </span> <span class="text-sm ml-1">${news.creator?.[0] || "N/A"}</span>
-            </p>
-            <p>
-              <span class="font-semibold">Source: </span> <span class="text-sm ml-1">${news?.datatype}</span>
-            </p>
-          </div>
-          <div>
-            <p>
-              <span class="font-semibold">Date: </span> <span class="text-sm ml-1">${news?.pubDate}</span>
-            </p>
-            <p>
-              <span class="font-semibold">Category: </span> <span class="text-sm ml-1">${news?.category?.[0]}</span>
-            </p>
-          </div>
+    </div>
+
+    <!-- Metadata Grid -->
+    <div class="p-6 space-y-4">
+      <div class="grid grid-cols-2 gap-4 py-4 border-y border-neutral-100 dark:border-neutral-800">
+        <div>
+          <p class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold">Author</p>
+          <p class="text-sm font-medium dark:text-neutral-200">${news.creator?.[0] || "Unknown"}</p>
         </div>
-        <img src="${news.image_url}"
-          alt="" class="mx-auto rounded-lg w-[70%]">
-        <p class="w-[80%] mx-auto">${news.description}</p>
-    <article/> `
+        <div>
+          <p class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold">Published</p>
+          <p class="text-sm font-medium dark:text-neutral-200">${news?.pubDate || "Recently"}</p>
+        </div>
+        <div>
+          <p class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold">Source</p>
+          <p class="text-sm font-medium dark:text-neutral-200 capitalize">${news?.datatype || "Web"}</p>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="max-h-48 overflow-y-auto pr-2 scrollbar-hide">
+        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm ">
+          ${news.description || "No description available for this article."}
+        </p>
+      </div>
+    </div>
+  </article>
+`;
+
 
   document.body.append(overlay)
 
@@ -187,7 +232,9 @@ async function renderNewsDetails(news) {
     }, 300);
   }
 
-  overlay.querySelector("#closebtn").addEventListener("click", closeModal);
+  const close = overlay.querySelector("#closebtn");
+  close.addEventListener("click", closeModal);
+  close.addEventListener("mouseenter", (e) => mouseOver(e, "close", close))
 
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {
