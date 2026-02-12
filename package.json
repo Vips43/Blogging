@@ -1,15 +1,15 @@
 {
-  "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./src/output.css --minify"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.18",
-    "dotenv": "^17.2.4"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.18",
-    "autoprefixer": "^10.4.24",
-    "tailwindcss": "^4.1.18"
-  }
+ "scripts": {
+  "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
+  "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify"
+ },
+ "dependencies": {
+  "@tailwindcss/vite": "^4.1.18",
+  "dotenv": "^17.2.4"
+ },
+ "devDependencies": {
+  "@tailwindcss/postcss": "^4.1.18",
+  "autoprefixer": "^10.4.24",
+  "tailwindcss": "^4.1.18"
+ }
 }
