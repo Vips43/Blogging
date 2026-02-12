@@ -96,18 +96,22 @@ async function renderCurrentMatches() {
 if (score_container) renderCurrentMatches();
 let newsController;
 export async function renderNews(cat) {
-  
+
   try {
-    if(newsController) newsController.abort();
+    if (newsController) newsController.abort();
 
     newsController = new AbortController()
+    const BASE_URL =
+      window.location.hostname === "localhost"
+        ? "http://localhost:3000"
+        : "https://your-backend-name.onrender.com";
 
-    const res = await fetch("http://localhost:3000/news/" + cat,{signal:newsController.signal})
+    const res = await fetch(`${BASE_URL}/news/${cat}`, { signal: newsController.signal })
 
     const newses = await res.json();
     console.log(newses)
 
-    if(!newses.results) {
+    if (!newses.results) {
       return console.log("no data")
     }
 
@@ -147,7 +151,7 @@ export async function renderNews(cat) {
 
     })
     news_container.append(frag)
-    
+
   } catch (error) {
     news_container.innerHTML = `<div>No data</div>`
     console.error("error in /news api")
@@ -155,7 +159,7 @@ export async function renderNews(cat) {
 }
 
 if (news_container) {
-let value = 'Breaking'
+  let value = 'Breaking'
   renderNews(value.toLowerCase())
   newsCats(value)
 }
