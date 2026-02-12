@@ -104,7 +104,7 @@ export async function renderNews(cat) {
     const BASE_URL =
       window.location.hostname === "localhost"
         ? "http://localhost:3000"
-        : "https://your-backend-name.onrender.com";
+        : "https://blogging-t7g3.onrender.com/";
 
     const res = await fetch(`${BASE_URL}/news/${cat}`, { signal: newsController.signal })
 
