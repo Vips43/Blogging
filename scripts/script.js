@@ -106,7 +106,7 @@ export async function renderNews(cat) {
         ? "http://localhost:3000"
         : "https://blogging-t7g3.onrender.com/";
 
-    const res = await fetch(`${BASE_URL}/news/${cat}`, { signal: newsController.signal })
+    const res = await fetch(`${BASE_URL}news/${cat}`, { signal: newsController.signal })
 
     const newses = await res.json();
     console.log(newses)
