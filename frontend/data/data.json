@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "api_version": "1.0",
+    "last_updated": "2026-02-13",
+    "language_supported": ["en", "hi"],
+    "cdn_base_url": "https://cdn.yourdomain.com/jyotirlinga/"
+  },
+  "pilgrim_checklist": [
+    "Carry valid ID proof",
+    "Wear traditional modest clothing",
+    "Avoid leather items inside temple",
+    "Keep cash for donations",
+    "Respect temple photography rules",
+    "Arrive early during festivals"
+  ],
+  "jyotirlings": [
+    {
+      "id": "somnath",
+      "name": {
+        "en": "Somnath Jyotirlinga",
+        "hi": "सोमनाथ ज्योतिर्लिंग"
+      },
+      "seo": {
+        "title": "Somnath Jyotirlinga Travel Guide",
+        "description": "Complete Somnath temple darshan guide with travel plan, stay, cost and routes."
+      },
+      "location": {
+        "state": "Gujarat",
+        "city": "Prabhas Patan",
+        "coordinates": {
+          "lat": 20.8880,
+          "lng": 70.4012
+        },
+        "google_maps": "https://maps.google.com/?q=Somnath+Temple"
+      },
+      "images": [
+        "somnath/hero.jpg",
+        "somnath/aarti.jpg",
+        "somnath/temple-night.jpg"
+      ],
+      "about": {
+        "en": "Somnath is the first Jyotirlinga and a symbol of eternal faith located on the Arabian Sea coast.",
+        "hi": "सोमनाथ पहला ज्योतिर्लिंग है और अनंत आस्था का प्रतीक है।"
+      },
+      "darshan": {
+        "timings": "6:00 AM – 10:00 PM",
+        "aarti": ["7:00 AM", "12:00 PM", "7:00 PM"],
+        "booking_link": "https://somnath.org/darshan-booking",
+        "process": "Free general queue. VIP tickets available at counter.",
+        "dress_code": "Traditional attire preferred"
+      },
+      "travel": {
+        "airport": "Diu Airport – 85 km",
+        "railway": "Veraval Station – 7 km",
+        "bus": "Regular GSRTC buses from Rajkot & Ahmedabad",
+        "local_transport": "Auto rickshaw, taxi"
+      },
+      "seasonal_crowd": {
+        "peak": ["Mahashivratri", "Shravan month"],
+        "moderate": ["October – March"],
+        "low": ["April – June"]
+      },
+      "trip_plan": {
+        "days": 2,
+        "itinerary": [
+          "Day 1: Temple darshan + evening aarti",
+          "Day 2: Triveni Sangam + Bhalka Tirth"
+        ]
+      },
+      "stay": {
+        "budget": ["Somnath Trust Guest House"],
+        "mid": ["Lords Inn Somnath"],
+        "luxury": ["The Fern Residency"]
+      },
+      "food_nearby": [
+        "Hotel Sun Plaza Restaurant",
+        "Somnath Bhojanalaya",
+        "Shiv Shakti Dining Hall"
+      ],
+      "festivals": [
+        "Mahashivratri",
+        "Kartika Purnima",
+        "Shravan Somvar"
+      ],
+      "approx_cost_inr": "₹4,000 – ₹8,000",
+      "best_time": "October – March",
+      "tips": [
+        "Attend evening aarti",
+        "Carry water in summer",
+        "No mobile photography inside temple"
+      ]
+    },
+
+    {
+      "id": "mallikarjuna",
+      "name": {
+        "en": "Mallikarjuna Jyotirlinga",
+        "hi": "मल्लिकार्जुन ज्योतिर्लिंग"
+      },
+      "location": {
+        "state": "Andhra Pradesh",
+        "city": "Srisailam",
+        "coordinates": { "lat": 16.0720, "lng": 78.8685 }
+      },
+      "trip_plan": { "days": 2 },
+      "approx_cost_inr": "₹5,000 – ₹9,000"
+    },
+
+    {
+      "id": "mahakaleshwar",
+      "name": { "en": "Mahakaleshwar", "hi": "महाकालेश्वर" },
+      "location": { "state": "Madhya Pradesh", "city": "Ujjain" },
+      "trip_plan": { "days": 1 }
+    },
+
+    {
+      "id": "omkareshwar",
+      "name": { "en": "Omkareshwar", "hi": "ओंकारेश्वर" },
+      "location": { "state": "Madhya Pradesh", "city": "Khandwa" },
+      "trip_plan": { "days": 1 }
+    },
+
+    {
+      "id": "kedarnath",
+      "name": { "en": "Kedarnath", "hi": "केदारनाथ" },
+      "location": { "state": "Uttarakhand", "city": "Kedarnath" },
+      "trip_plan": { "days": 4 }
+    },
+
+    {
+      "id": "bhimashankar",
+      "name": { "en": "Bhimashankar", "hi": "भीमाशंकर" }
+    },
+
+    {
+      "id": "kashi_vishwanath",
+      "name": { "en": "Kashi Vishwanath", "hi": "काशी विश्वनाथ" }
+    },
+
+    {
+      "id": "trimbakeshwar",
+      "name": { "en": "Trimbakeshwar", "hi": "त्र्यंबकेश्वर" }
+    },
+
+    {
+      "id": "vaidyanath",
+      "name": { "en": "Vaidyanath", "hi": "वैद्यनाथ" }
+    },
+
+    {
+      "id": "nageshwar",
+      "name": { "en": "Nageshwar", "hi": "नागेश्वर" }
+    },
+
+    {
+      "id": "rameshwaram",
+      "name": { "en": "Ramanathaswamy", "hi": "रामेश्वरम" }
+    },
+
+    {
+      "id": "grishneshwar",
+      "name": { "en": "Grishneshwar", "hi": "घृष्णेश्वर" }
+    }
+  ]
+}

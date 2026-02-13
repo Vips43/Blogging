@@ -1,37 +1,75 @@
-import { renderNews } from "./script.js";
+import { renderNews } from "./news.js";
 
 const navItems = document.getElementById("navItems");
 const newsCatUL = document.getElementById("newsCatUL");
 
-const home = window.location.origin
-const about = "pages/about.html"
-const contact = "pages/contact.html"
+const home = "/index.html"
+const about = "/pages/about.html"
+const contact = "/pages/contact.html"
+const news = "/pages/news.html"
+
+const navLis = [
+  { name: "home", location: home },
+  {
+    name: "provides",
+    children: [
+      { name: "news", location: news },
+      { name: "jyotirlinga", location: "pages/jyotirlinga.html" }
+    ]
+  },
+  { name: "about", location: about },
+  { name: "contact me", location: contact },
+];
 
 
 function navFunc() {
+  const activeRoute = window.location.pathname;
   navItems.innerHTML = ``
-  const navLis = [{ name: 'home', location: home }, { name: 'about', location: about }, { name: 'contact me', location: contact }];
+
   navLis.forEach(item => {
+    console.log(item)
+    const isActiveTab =
+      activeRoute === item.location || (item.location === "/" && activeRoute === "/index.html")
+
     const li = document.createElement("li");
+
+    li.className = `${isActiveTab} ? "bg-white text-black" : "" nav-item`;
     li.innerText = item.name;
+
+    if(!item.children){
+      li.addEventListener("click", () => {
+        window.location.href = item.location
+      })
+    }
+    if(item.children){
+      const ul = document.createElement("ul");
+      ul.className = "dropdown"
+      
+      item.children.forEach(child=>{
+        const childLi = document.createElement("li");
+        childLi.textContent = child.name;
+
+        childLi.addEventListener("click", e=>{
+          e.stopPropagation();
+          window.location.href = child.location;
+        });
+        ul.append(childLi)
+      })
+      li.append(ul);
+    }
+
     navItems.append(li)
-    li.addEventListener("click", () => {
-      home === home ? "" : home
-      window.location.assign(
-        new URL(item.location, location))
-    })
   })
 }
 if (navItems) navFunc();
 
-const newsCategory = ["Breaking", 'Business', "Crime", "Domestic", "Education", "Entertainment", "Food", "Health", "Lifestyle", "Politics", "Sports", "Technology",];
-export let selectedCat = "food";
+export const newsCategory = ["Breaking", 'Business', "Crime", "Domestic", "Education", "Entertainment", "Food", "Health", "Lifestyle", "Politics", "Sports", "Technology",];
 
 export function newsCats(value) {
   const frag = document.createDocumentFragment();
   newsCategory.forEach(cat => {
     const bgClass = value === cat ? "bg-black text-white" : "bg-yellow-950"
-    console.log(bgClass)
+
     const li = document.createElement("li");
 
     li.className = `li shrink-0 text-sm px-3 py-1 ${bgClass} rounded-full hover:bg-black hover:text-white`;

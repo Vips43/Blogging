@@ -57,7 +57,7 @@ app.get("/scores", async (req, res) => {
 
 let newsCache = {};
 let newsTimestamp = 0;
-const newsExpiry = 10 * 60 * 1000;
+const newsExpiry = 10 * 60 * 10000;
 
 
 async function fetchNewsBackend(cat) {
