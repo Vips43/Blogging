@@ -1,6 +1,13 @@
-import { mouseOver, newsCats } from "./index.js";
+import { mouseOver, newsCats, pageLoader } from "./index.js";
 
 const news_container = document.getElementById("news_container");
+
+const loader = pageLoader()
+
+window.addEventListener("load", () => {
+  setTimeout(() => loader.remove(), 300);
+})
+
 
 let newsController;
 export async function renderNews(cat) {
