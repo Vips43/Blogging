@@ -104,7 +104,7 @@ export async function renderNews(cat) {
     const BASE_URL =
       window.location.hostname === "localhost"
         ? "http://localhost:3000"
-        : "https://blogging-hiqy.onrender.com";
+        : "https://blogging-4akb.vercel.app";
 
     const res = await fetch(`${BASE_URL}/news/${cat}`, { signal: newsController.signal })
 
