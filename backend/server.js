@@ -9,14 +9,14 @@ const port = process.env.PORT || 3000;
 const _filename = fileURLToPath(import.meta.url);
 const _dirname = path.dirname(_filename);
 
-app.use(cors());
 
 //serve frontend
-app.use(express.static(path.join(_dirname, "..")));
+app.use(express.static(path.join(_dirname, "..", "frontend")));
 app.get("/", (req, res) => {
-    res.sendFile(path.join(_dirname, "..", "index.html"))
+    res.sendFile(path.join(_dirname, "..", "frontend", "index.html"))
 })
 
+app.use(cors());
 
 
 const cache = {};
@@ -76,7 +76,7 @@ async function fetchNewsBackend(cat) {
         newsTimestamp = Date.now();
 
         newsCache[cat] = { data: data, timestamp: newsTimestamp }
-        
+
         console.log("Fetched news from API", cat);
         return data;
     } catch (error) {
