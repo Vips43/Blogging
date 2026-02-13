@@ -1,12 +1,23 @@
 import express from "express";
 import cors from "cors";
-import { LocalStorage } from "node-localstorage";
-
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
+const _filename = fileURLToPath(import.meta.url);
+const _dirname = path.dirname(_filename);
 
 app.use(cors());
+
+//serve frontend
+app.use(express.static(path.join(_dirname, "..")));
+app.get("/", (req, res) => {
+    res.sendFile(path.join(_dirname, "..", "index.html"))
+})
+
+
 
 const cache = {};
 
@@ -51,7 +62,7 @@ const newsExpiry = 10 * 60 * 1000;
 
 async function fetchNewsBackend(cat) {
     if (newsCache[cat] && (Date.now() - newsCache[cat].timestamp < newsExpiry)) {
-        console.log("Loaded news from cache",cat);
+        console.log("Loaded news from cache", cat);
         return newsCache[cat].data;
     }
 
@@ -65,7 +76,7 @@ async function fetchNewsBackend(cat) {
         newsTimestamp = Date.now();
 
         newsCache[cat] = { data: data, timestamp: newsTimestamp }
-        console.log(newsCache)
+        
         console.log("Fetched news from API", cat);
         return data;
     } catch (error) {
