@@ -70,7 +70,7 @@ async function renderCurrentMatches() {
     }).join("")}
 
     <img
-      src="/vs.png"
+      src="/vs.png" loading="lazy"
       class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-9 opacity-80 dark:invert"
       alt="vs"
     />
@@ -104,25 +104,23 @@ export async function renderNews(cat) {
     const BASE_URL =
       window.location.hostname === "localhost"
         ? "http://localhost:3000"
-        : "https://blogging-t7g3.onrender.com/";
+        : "https://blogging-hiqy.onrender.com";
 
-    const res = await fetch(`/news/${cat}`, { signal: newsController.signal })
+    const res = await fetch(`${BASE_URL}/news/${cat}`, { signal: newsController.signal })
 
     const newses = await res.json();
-    console.log(newses)
-
-    if (!newses.results) {
-      return console.log("no data")
-    }
 
     const frag = document.createDocumentFragment();
     news_container.innerHTML = ``
     newses?.results?.forEach((news, i) => {
+      
       const article = document.createElement("article");
-      article.className = `flex gap-1 p-2 dark:bg-neutral-700 bg-white dark:text-white shadow-lg transition-all duration-1000 opacity-0 translate-y-5 rounded-md`;
+      
+      article.className = `flex gap-1 p-2 dark:bg-neutral-700 bg-white dark:text-white shadow-lg transition-all duration-1000 opacity-0 translate-y-5 rounded-md cursor-pointer`;
+
       article.innerHTML = `
       <div>
-        <img
+        <img loading="lazy"
           src="${news.image_url || "/fff.jpg&text=no-img"}"
           alt="" class="h-22 w-full flex-1 shrink-0 aspect-video object-contain rounded-md" />
       </div>
@@ -153,7 +151,7 @@ export async function renderNews(cat) {
     news_container.append(frag)
 
   } catch (error) {
-    news_container.innerHTML = `<div>No data</div>`
+    news_container.innerHTML = `<div class="text-2xl h-56 w-full grid place-items-center">No data</div>`
     console.error("error in /news api")
   }
 }

@@ -44,42 +44,38 @@ app.get("/scores", async (req, res) => {
 })
 
 
-let newsCache = null;
+let newsCache = {};
 let newsTimestamp = 0;
 const newsExpiry = 10 * 60 * 1000;
-const localStorage = new LocalStorage('./scratch');
+
+
 async function fetchNewsBackend(cat) {
-    // if (newsCache && (Date.now() - newsTimestamp < newsExpiry)) {
-    //     console.log("Loaded news from cache");
-    //     return newsCache;
-    // }
-    const local = JSON.parse(localStorage.getItem(`${cat}`))
-    if (local && (Date.now() - newsTimestamp < newsExpiry)) {
-        console.log("Loaded news from cache");
-        return local;
+    if (newsCache[cat] && (Date.now() - newsCache[cat].timestamp < newsExpiry)) {
+        console.log("Loaded news from cache",cat);
+        return newsCache[cat].data;
     }
+
 
     try {
         const query = encodeURIComponent("all latest news from india");
         const url = `https://newsdata.io/api/1/latest?apikey=${news_Api_key}&q=${query}&category=${cat}`;
-        // const url = `https://newsdata.io/api/1/latest?apikey=${news_Api_key}&q=${query}`;
         const res = await fetch(url);
         const data = await res.json();
 
-        newsCache = data[cat];
         newsTimestamp = Date.now();
 
-        console.log("Fetched news from API");
-        localStorage.setItem(`${cat}`, JSON.stringify(data,newsTimestamp))
+        newsCache[cat] = { data: data, timestamp: newsTimestamp }
+        console.log(newsCache)
+        console.log("Fetched news from API", cat);
         return data;
     } catch (error) {
         console.error("Error fetching news:", error);
-        return { error: "Failed to fetch news" };
+        return { error: "Failed to fetch news", cat };
     }
 }
 
 app.get(`/news/:cat`, async (req, res) => {
-    const {cat} = req.params
+    const { cat } = req.params
     const data = await fetchNewsBackend(cat);
     res.json(data)
 })
