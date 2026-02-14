@@ -14,7 +14,7 @@ const navLis = [
     name: "provides",
     children: [
       { name: "news", location: news },
-      { name: "jyotirlinga", location: "pages/jyotirlinga.html" }
+      { name: "jyotirlinga", location: "/pages/jyotirlinga.html" }
     ]
   },
   { name: "about", location: about },
@@ -27,13 +27,12 @@ function navFunc() {
   navItems.innerHTML = ``
 
   navLis.forEach(item => {
-    console.log(item)
     const isActiveTab =
       activeRoute === item.location || (item.location === "/" && activeRoute === "/index.html")
 
     const li = document.createElement("li");
 
-    li.className = `${isActiveTab} ? "bg-white text-black" : "" nav-item`;
+    li.className = `${isActiveTab} ? "bg-white text-black" : "" nav-item select-none`;
     li.innerText = item.name;
 
     if(!item.children){
@@ -72,7 +71,7 @@ export function newsCats(value) {
 
     const li = document.createElement("li");
 
-    li.className = `li shrink-0 text-sm px-3 py-1 ${bgClass} rounded-full hover:bg-black hover:text-white`;
+    li.className = `li shrink-0 text-sm px-3 py-1 ${bgClass} rounded-full hover:bg-black hover:text-white select-none`;
     li.textContent = cat;
     frag.append(li)
     li.addEventListener("click", () => {

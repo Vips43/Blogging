@@ -1,165 +1,1605 @@
 {
-  "meta": {
-    "api_version": "1.0",
-    "last_updated": "2026-02-13",
-    "language_supported": ["en", "hi"],
-    "cdn_base_url": "https://cdn.yourdomain.com/jyotirlinga/"
-  },
-  "pilgrim_checklist": [
-    "Carry valid ID proof",
-    "Wear traditional modest clothing",
-    "Avoid leather items inside temple",
-    "Keep cash for donations",
-    "Respect temple photography rules",
-    "Arrive early during festivals"
-  ],
-  "jyotirlings": [
-    {
-      "id": "somnath",
-      "name": {
-        "en": "Somnath Jyotirlinga",
-        "hi": "सोमनाथ ज्योतिर्लिंग"
-      },
-      "seo": {
-        "title": "Somnath Jyotirlinga Travel Guide",
-        "description": "Complete Somnath temple darshan guide with travel plan, stay, cost and routes."
-      },
-      "location": {
-        "state": "Gujarat",
-        "city": "Prabhas Patan",
-        "coordinates": {
-          "lat": 20.8880,
-          "lng": 70.4012
-        },
-        "google_maps": "https://maps.google.com/?q=Somnath+Temple"
-      },
-      "images": [
-        "somnath/hero.jpg",
-        "somnath/aarti.jpg",
-        "somnath/temple-night.jpg"
-      ],
-      "about": {
-        "en": "Somnath is the first Jyotirlinga and a symbol of eternal faith located on the Arabian Sea coast.",
-        "hi": "सोमनाथ पहला ज्योतिर्लिंग है और अनंत आस्था का प्रतीक है।"
-      },
-      "darshan": {
-        "timings": "6:00 AM – 10:00 PM",
-        "aarti": ["7:00 AM", "12:00 PM", "7:00 PM"],
-        "booking_link": "https://somnath.org/darshan-booking",
-        "process": "Free general queue. VIP tickets available at counter.",
-        "dress_code": "Traditional attire preferred"
-      },
-      "travel": {
-        "airport": "Diu Airport – 85 km",
-        "railway": "Veraval Station – 7 km",
-        "bus": "Regular GSRTC buses from Rajkot & Ahmedabad",
-        "local_transport": "Auto rickshaw, taxi"
-      },
-      "seasonal_crowd": {
-        "peak": ["Mahashivratri", "Shravan month"],
-        "moderate": ["October – March"],
-        "low": ["April – June"]
-      },
-      "trip_plan": {
-        "days": 2,
-        "itinerary": [
-          "Day 1: Temple darshan + evening aarti",
-          "Day 2: Triveni Sangam + Bhalka Tirth"
-        ]
-      },
-      "stay": {
-        "budget": ["Somnath Trust Guest House"],
-        "mid": ["Lords Inn Somnath"],
-        "luxury": ["The Fern Residency"]
-      },
-      "food_nearby": [
-        "Hotel Sun Plaza Restaurant",
-        "Somnath Bhojanalaya",
-        "Shiv Shakti Dining Hall"
-      ],
-      "festivals": [
-        "Mahashivratri",
-        "Kartika Purnima",
-        "Shravan Somvar"
-      ],
-      "approx_cost_inr": "₹4,000 – ₹8,000",
-      "best_time": "October – March",
-      "tips": [
-        "Attend evening aarti",
-        "Carry water in summer",
-        "No mobile photography inside temple"
-      ]
+ "meta": {
+  "api_version": "1.0",
+  "last_updated": "2026-02-13",
+  "language_supported": ["en", "hi"],
+  "cdn_base_url": "https://cdn.yourdomain.com/jyotirlinga/"
+ },
+ "pilgrim_checklist": [
+  "Carry valid ID proof",
+  "Wear traditional modest clothing",
+  "Avoid leather items inside temple",
+  "Keep cash for donations",
+  "Respect temple photography rules",
+  "Arrive early during festivals"
+ ],
+ "jyotirlings": [
+  {
+   "id": "somnath",
+   "name": {
+    "en": "Somnath Jyotirlinga",
+    "hi": "सोमनाथ ज्योतिर्लिंग"
+   },
+   "seo": {
+    "title": "Somnath Jyotirlinga Travel Guide",
+    "description": "Complete Somnath temple darshan guide with travel plan, stay, cost and routes."
+   },
+   "location": {
+    "state": "Gujarat",
+    "city": "Prabhas Patan",
+    "coordinates": {
+     "lat": 20.888,
+     "lng": 70.4012
     },
-
-    {
-      "id": "mallikarjuna",
-      "name": {
-        "en": "Mallikarjuna Jyotirlinga",
-        "hi": "मल्लिकार्जुन ज्योतिर्लिंग"
-      },
-      "location": {
-        "state": "Andhra Pradesh",
-        "city": "Srisailam",
-        "coordinates": { "lat": 16.0720, "lng": 78.8685 }
-      },
-      "trip_plan": { "days": 2 },
-      "approx_cost_inr": "₹5,000 – ₹9,000"
+    "google_maps": "https://maps.google.com/?q=Somnath+Temple"
+   },
+   "images": [
+    "/images/jyotirlinga/Somnath/Somnath-temple.avif",
+    "/images/jyotirlinga/Somnath/Somnath-temple.jfif",
+    "/images/jyotirlinga/Somnath/Somnath-temple.jpg",
+    "/images/jyotirlinga/Somnath/somnathtemple-lingam.jpg",
+    "/images/jyotirlinga/Somnath/Somnath-night view.jfif"
+   ],
+   "about": {
+    "en": {
+     "label": "Shree Somnath Temple",
+     "text": "It is said that Somraj (the moon god) first built a temple in Somnath, made of gold; this was later rebuilt by Ravana in silver, by Krishna in wood, and by Bhimdev in stone. The current serene, symmetrical structure was built to traditional designs on the original coastal site: it’s painted a creamy colour and boasts fine sculpture. At its heart is a large, black Shiva lingam—one of the 12 most sacred Shiva shrines, known as the jyotirlingas. <br>A detailed account of the temple by the renowned Persian scholar Al-Biruni may have contributed to its fame across regions. In late 1025 or early 1026, the temple was targeted by Mahmud of Ghazni, a ruthless invader from present-day Afghanistan. At that time, the temple was so wealthy that it reportedly employed 300 musicians, 500 dancing girls, and 300 barbers. Mahmud captured the town and temple after a fierce two-day battle in which an estimated 70,000 defenders were killed. He then plundered the temple’s immense riches and destroyed the structure. This marked the beginning of a cycle of devastation and reconstruction that continued for centuries—the temple was again destroyed in 1297, 1394, and finally in 1706 under Mughal ruler Aurangzeb. <br>The modern temple was rebuilt only in 1950, following India’s independence, on the same site. The reconstruction was initiated by Bharat Ratna Sardar Vallabhbhai Patel, the first Deputy Prime Minister of India, who laid the foundation stone on November 12, 1947, as a symbol of national revival and cultural pride."
     },
-
-    {
-      "id": "mahakaleshwar",
-      "name": { "en": "Mahakaleshwar", "hi": "महाकालेश्वर" },
-      "location": { "state": "Madhya Pradesh", "city": "Ujjain" },
-      "trip_plan": { "days": 1 }
-    },
-
-    {
-      "id": "omkareshwar",
-      "name": { "en": "Omkareshwar", "hi": "ओंकारेश्वर" },
-      "location": { "state": "Madhya Pradesh", "city": "Khandwa" },
-      "trip_plan": { "days": 1 }
-    },
-
-    {
-      "id": "kedarnath",
-      "name": { "en": "Kedarnath", "hi": "केदारनाथ" },
-      "location": { "state": "Uttarakhand", "city": "Kedarnath" },
-      "trip_plan": { "days": 4 }
-    },
-
-    {
-      "id": "bhimashankar",
-      "name": { "en": "Bhimashankar", "hi": "भीमाशंकर" }
-    },
-
-    {
-      "id": "kashi_vishwanath",
-      "name": { "en": "Kashi Vishwanath", "hi": "काशी विश्वनाथ" }
-    },
-
-    {
-      "id": "trimbakeshwar",
-      "name": { "en": "Trimbakeshwar", "hi": "त्र्यंबकेश्वर" }
-    },
-
-    {
-      "id": "vaidyanath",
-      "name": { "en": "Vaidyanath", "hi": "वैद्यनाथ" }
-    },
-
-    {
-      "id": "nageshwar",
-      "name": { "en": "Nageshwar", "hi": "नागेश्वर" }
-    },
-
-    {
-      "id": "rameshwaram",
-      "name": { "en": "Ramanathaswamy", "hi": "रामेश्वरम" }
-    },
-
-    {
-      "id": "grishneshwar",
-      "name": { "en": "Grishneshwar", "hi": "घृष्णेश्वर" }
+    "hi": {
+     "label": "श्री सोमनाथ मंदिर",
+     "text": "ऐसा कहा जाता है कि सोमराज (चंद्रमा देवता) ने सबसे पहले सोमनाथ में सोने का मंदिर बनवाया था; बाद में रावण ने इसे चांदी से, कृष्ण ने लकड़ी से और भीमदेव ने पत्थर से पुनर्निर्मित करवाया। वर्तमान शांत, सममित संरचना मूल तटीय स्थल पर पारंपरिक डिजाइनों के अनुसार बनाई गई है: यह मलाईदार रंग से रंगी हुई है और इसमें उत्कृष्ट मूर्तिकला है। इसके केंद्र में एक विशाल, काला शिवलिंग है—जो 12 सबसे पवित्र शिव मंदिरों में से एक है, जिन्हें ज्योतिर्लिंग के रूप में जाना जाता है। <br>प्रसिद्ध फ़ारसी विद्वान अल-बिरूनी द्वारा मंदिर का विस्तृत वर्णन संभवतः इसे विभिन्न क्षेत्रों में प्रसिद्धि दिलाने में सहायक रहा। सन् 1025 के अंत या सन् 1026 के प्रारंभ में, वर्तमान अफ़गानिस्तान के क्रूर आक्रमणकारी महमूद ग़ज़नी ने मंदिर पर आक्रमण किया। उस समय मंदिर इतना समृद्ध था कि कहा जाता है कि वहाँ 300 संगीतकार, 500 नर्तकियाँ और 300 नाई कार्यरत थे। महमूद ने दो दिनों तक चले भीषण युद्ध में शहर और मंदिर पर कब्जा कर लिया, जिसमें अनुमानित 70,000 रक्षक मारे गए। इसके बाद उसने मंदिर की अपार संपत्ति लूट ली और संरचना को नष्ट कर दिया। यहीं से विनाश और पुनर्निर्माण का एक ऐसा चक्र शुरू हुआ जो सदियों तक चलता रहा—मंदिर को 1297, 1394 और अंततः 1706 में मुगल शासक औरंगज़ेब के शासनकाल में फिर से नष्ट कर दिया गया। <br>आधुनिक मंदिर का पुनर्निर्माण भारत की स्वतंत्रता के बाद 1950 में उसी स्थान पर किया गया था। पुनर्निर्माण की पहल भारत रत्न सरदार वल्लभभाई पटेल ने की थी, जो भारत के पहले उप प्रधानमंत्री थे। उन्होंने 12 नवंबर 1947 को राष्ट्रीय पुनरुत्थान और सांस्कृतिक गौरव के प्रतीक के रूप में इसकी आधारशिला रखी थी। <br>दर्शन का सर्वोत्तम समय: सोमनाथ मंदिर घूमने का सबसे अच्छा समय अक्टूबर से फरवरी तक के ठंडे महीने हैं, हालांकि यह मंदिर पूरे वर्ष खुला रहता है। शिवरात्रि (आमतौर पर फरवरी या मार्च में) और कार्तिक पूर्णिमा (दिवाली के आसपास) यहां बड़े उत्साह के साथ मनाई जाती हैं। अधिक जानकारी के लिए, कृपया दिए गए स्रोत पर जाएं।"
     }
-  ]
+   },
+   "darshan": {
+    "timings": "4:30 AM – 10:00 PM",
+    "aarti": [
+     { "label": "Mangala Aarti", "time": "7:00 AM" },
+     { "label": "Bhog Aarti", "time": "12:00 PM" },
+     { "label": "Sandhya Aarti", "time": "7:00 PM" },
+     {
+      "label": "Light & Sound Show (Jay Somnath)",
+      "time": "7:45 PM – 8:45 PM (₹30-50)"
+     }
+    ],
+    "booking_link": "https://somnath.org/",
+    "process": "Visit somnath.org and click on 'Online Booking' or 'Online Donation/Pooja Vidhi'",
+    "dress_code": {
+     "men": "Dhoti, Pyjama, or formal pants/shirts.",
+     "women": "Saree, Chudidhar, or traditional outfits.",
+     "prohibited": [
+      "Jeans",
+      "T-shirts",
+      "Short dresses",
+      "sleeveless tops",
+      "electronic gadgets"
+     ]
+    }
+   },
+   "travel": {
+    "airport": "Diu Airport – 85 km",
+    "railway": "Veraval Station – 7 km",
+    "bus": "Regular GSRTC buses from Rajkot & Ahmedabad",
+    "local_transport": "Auto rickshaw, taxi"
+   },
+   "seasonal_crowd": {
+    "peak": ["Mahashivratri", "Shravan month"],
+    "moderate": ["October – March"],
+    "low": ["April – June"]
+   },
+   "trip_plan": {
+    "days": 3,
+    "itinerary": [
+     {
+      "label": "Day 1: Arrival & Evening Aarti",
+      "text": "• Reach Veraval by train or Diu/Porbandar by flight. <br>• Check into a hotel or the temple trust guest house (Sagar Darshan). <br>• Evening: Attend the Somnath Temple Aarti and the Light & Sound Show."
+     },
+     {
+      "label": "Day 2: Local Sightseeing",
+      "text": "• Visit Bhalka Tirth. <br>• Explore Triveni Sangam and Gita Mandir. <br>• Visit Somnath Museum and Panch Pandav Gufa."
+     },
+     {
+      "label": "Day 3: Departure",
+      "text": "• Morning Darshan at the main temple. <br>• Optional: Visit Junagadh or Sasan Gir before return."
+     }
+    ],
+    "note": ""
+   },
+   "stay": {
+    "budget": {
+     "price_range_inr": "₹500 – ₹1,500",
+     "hotels": [
+      { "name": "Sagar Darshan Guest House" },
+      { "name": "Maheshwari Atithi Gruh" }
+     ]
+    },
+    "mid": {
+     "price_range_inr": "₹2,200 – ₹4,500",
+     "hotels": [
+      { "name": "Hotel Shri Radhe, Maharaja Inn Somnath" },
+      { "name": "Safari Hotel & Resort" }
+     ]
+    },
+    "luxury": {
+     "price_range_inr": "₹5,500 – ₹10,000+",
+     "hotels": [
+      { "name": "Sarovar Portico, Lords Inn Somnath" },
+      { "name": "King’s Kraft Tremezzo Inn" }
+     ]
+    }
+   },
+   "food_nearby": {
+    "restaurants": [
+     { "name": "Hotel Ambar" },
+     { "name": "Sagar Darshan Restaurant" },
+     { "name": "Lords Inn (Pure Veg)" }
+    ],
+    "must_try_dishes": [
+     "Gujarati/Kathiyawadi Thali",
+     "Bajra no Rotlo",
+     "Lasaniya Bataka",
+     "Fafda-Gathiya",
+     "fresh coconut water"
+    ],
+    "local_food_note": "Somnath is renowned for its Kathiyawadi cuisine, which is strictly vegetarian."
+   },
+   "festivals": ["Mahashivratri", "Kartika Purnima", "Shravan Somvar"],
+   "approx_cost_inr": "₹5,000 – ₹7,000",
+   "best_time": "October – March",
+   "tips": [
+    "Attend evening aarti",
+    "Carry water in summer",
+    "No mobile photography inside temple"
+   ]
+  },
+
+  {
+   "id": "mallikarjuna",
+   "name": {
+    "en": "Mallikarjuna Jyotirlinga",
+    "hi": "मल्लिकार्जुन ज्योतिर्लिंग"
+   },
+   "seo": {
+    "title": "Mallikarjuna Jyotirlinga Travel Guide",
+    "description": "Complete Mallikarjuna temple darshan guide with travel plan, stay, cost and routes."
+   },
+   "location": {
+    "state": "Andhra Pradesh",
+    "city": "Srisailam",
+    "coordinates": { "lat": 16.072, "lng": 78.8685 },
+    "google_maps": "https://www.google.com/maps/search/Mallikarjuna+Temple"
+   },
+   "images": [
+    "/images/jyotirlinga/mallikarjun/Mallikarjun-Temple.jpg",
+    "/images/jyotirlinga/mallikarjun/mallikarjun-linga.jpg",
+    "/images/jyotirlinga/mallikarjun/mallinkarjun-night.webp"
+   ],
+   "about": {
+    "en": {
+     "label": "Spiritual Significance of Mallikarjuna Temple",
+     "text": "According to Hindu mythology, the temple stands holy because it contains two significant religious titles. It functions as both a Jyotirlinga temple and a Shakti Peetha holy site where people venerate Bhramaramba as Goddess Parvati. The temple gets its name from the cosmic union of Lord Shiva (Mallikarjuna) with Goddess Parvati which represents divine energy in balance. This sacred location holds deep emotional power since Shiva revealed himself at this precise location after his son Kartikeya’s departure to provide comfort."
+    },
+    "hi": {
+     "label": "श्री मल्लिकार्जुन मंदिर का आध्यात्मिक महत्व",
+     "text": "हिंदू पौराणिक कथाओं के अनुसार, यह मंदिर दो महत्वपूर्ण धार्मिक महत्व रखता है। यह ज्योतिर्लिंग और शक्ति पीठ दोनों के रूप में प्रसिद्ध है, जहाँ लोग भ्रामरम्बा को देवी पार्वती के रूप में पूजते हैं। मंदिर का नाम भगवान शिव (मल्लिकार्जुन) और देवी पार्वती के दिव्य मिलन से पड़ा है, जो संतुलित दिव्य ऊर्जा का प्रतीक है। इस पवित्र स्थान का गहरा भावनात्मक महत्व है क्योंकि शिव ने अपने पुत्र कार्तिकेय के प्रस्थान के बाद उन्हें सांत्वना देने के लिए इसी स्थान पर स्वयं को प्रकट किया था।"
+    }
+   },
+   "darshan": {
+    "timings": "4:30 AM – 10:00 PM",
+    "aarti": [
+     { "label": "Mangala Aarti", "time": "4:30 AM" },
+     { "label": "Morning Abhishekam", "time": "Starts from 6:30 AM" },
+     { "label": "Evening Re-opening", "time": "4:30 PM" },
+     { "label": "Evening Darshan / Abhishekam", "time": "6:00 PM – 9:00 PM" }
+    ],
+    "booking_link": "https://online.srisailadevasthanam.org/",
+    "process": "Book darshan and sevas online via official temple portal or use free general queue.",
+    "dress_code": "Traditional attire preferred"
+   },
+   "travel": {
+    "airport": "Hyderabad Airport – 200 to 230 km",
+    "railway": "Markapur Station – 85 to 90 km",
+    "bus": "APSRTC / TSRTC buses operate from Hyderabad and nearby cities",
+    "local_transport": "Auto rickshaw, taxi, walking"
+   },
+   "seasonal_crowd": {
+    "peak": ["Mahashivratri", "Shravan month"],
+    "moderate": ["March – May"],
+    "low": ["June – September"]
+   },
+   "trip_plan": {
+    "days": 2,
+    "itinerary": [
+     {
+      "label": "Best Time to Visit",
+      "text": "October to March (winter) is ideal, especially for Maha Shivaratri"
+     },
+     {
+      "label": "Day 1",
+      "text": "Temple darshan + evening aarti"
+     },
+     {
+      "label": "Day 2",
+      "text": "Sakshi Ganapathi Temple + Paladhara Panchadhara + Sikharesvara Temple"
+     },
+     {
+      "label": "Afternoon",
+      "text": "Visit Pathala Ganga and the Srisailam Dam"
+     }
+    ],
+    "note": "The road from Bangalore is often diverted at Boothpur to avoid bad patches."
+   },
+   "stay": {
+    "budget": {
+     "price_range_inr": "₹1,000 – ₹2,000 per night",
+     "hotels": [
+      { "name": "Mallikarjuna Sadan" },
+      { "name": "Sapthagiri Lodge" }
+     ]
+    },
+    "mid": {
+     "price_range_inr": "₹2,000 – ₹4,000 per night",
+     "hotels": [
+      { "name": "AP Tourism Haritha Hotel" },
+      { "name": "Trinetra Home Stay" }
+     ]
+    },
+    "luxury": {
+     "price_range_inr": "Above ₹4,000 per night",
+     "hotels": [
+      { "name": "Hotel Srisaila's Nest" },
+      { "name": "APTDC Haritha Resort (Premium Suites)" }
+     ]
+    }
+   },
+   "food_nearby": {
+    "restaurants": [
+     { "name": "Mallikarjuna Sadan Food Court" },
+     { "name": "Kritunga Restaurant" },
+     { "name": "Local Dhaba Area" }
+    ],
+    "famous_dishes": [
+     "Chicken Kabab",
+     "Andhra Chicken Curry",
+     "Chicken Lollipop Biryani",
+     "Gobi Pepper Dry"
+    ]
+   },
+   "festivals": ["Mahashivratri", "Ugadi Utsav", "Dasara", "Kumbhothsavams"],
+   "approx_cost_inr": "₹4,000 – ₹8,000",
+   "best_time": "October - March",
+   "tips": [
+    "Attend evening aarti",
+    "Carry water in summer",
+    "Dress traditionally",
+    "No mobile photography inside temple",
+    "Carry sufficient cash for parking and food",
+    "Valid ID proof required"
+   ]
+  },
+
+  {
+   "id": "mahakaleshwar",
+   "name": { "en": "Mahakaleshwar", "hi": "महाकालेश्वर" },
+   "seo": {
+    "title": "Mahakaleshwar Jyotirlinga Travel Guide",
+    "description": "Complete Mahakaleshwar temple darshan guide with travel plan, stay, cost and routes."
+   },
+   "location": {
+    "state": "Madhya Pradesh",
+    "city": "Ujjain",
+    "coordinates": { "lat": 23.1765, "lng": 75.7885 },
+    "google_maps": "https://www.google.com/maps/search/Mahakaleshwar+Temple"
+   },
+   "images": [
+    "/images/jyotirlinga/mahakaleshwar/mahakal-temple.jpg",
+    "/images/jyotirlinga/mahakaleshwar/mahakal-lingam.jfif",
+    "/images/jyotirlinga/mahakaleshwar/shri-mahakaleshwar-night.jpg"
+   ],
+   "about": {
+    "en": {
+     "label": "Shri Mahakaleshwar Temple",
+     "text": "Shri Mahakaleshwar of Ujjayini is known among the twelve celebrated Jyotirlingas in India. The glory of Mahakaleshwar temple has been vividly described in various Purans. Starting with Kalidasa, many Sanskrit poets have eulogized this temple in emotive terms. Ujjain used to be the central point for calculation of Indian time and Mahakala was considered as the distinctive presiding deity of Ujjain. The presiding deity of time, Shiva, in all his splendor, reigns eternal in Ujjain. The temple of Mahakaleshwar evokes awe and reverence with its majesty. The Mahakal dominates the life of the city and its people and provides an unbreakable link with past traditions. The lingam is believed to be swayambhu (self-born), deriving currents of power from within itself. The idol faces south (dakshinamurti), a unique tantric feature among the 12 Jyotirlingas. Nagchandreshwar darshan opens only on Nagpanchami. On Mahashivaratri, a huge fair is held near the temple and worship continues through the night."
+    },
+    "hi": {
+     "label": "श्री महाकालेश्वर मंदिर",
+     "text": "उज्जैन के श्री महाकालेश्वर भारत के बारह प्रसिद्ध ज्योतिर्लिंगों में गिने जाते हैं। महाकालेश्वर मंदिर की महिमा का वर्णन विभिन्न पुराणों में मिलता है। कालिदास सहित अनेक संस्कृत कवियों ने इस मंदिर की स्तुति की है। उज्जैन भारतीय समय गणना का केंद्र रहा है और महाकाल को नगर का अधिष्ठाता देवता माना जाता है। महाकालेश्वर मंदिर अपनी भव्यता से श्रद्धा जगाता है और आधुनिक जीवन के बीच भी परंपरा से जुड़ा रखता है। महाकाल का ज्योतिर्लिंग स्वयंभू माना जाता है और दक्षिणमुखी है, जो बारह ज्योतिर्लिंगों में अद्वितीय है। नागचंद्रेश्वर की प्रतिमा के दर्शन केवल नागपंचमी पर होते हैं। महाशिवरात्रि पर विशाल मेला लगता है और पूरी रात पूजा चलती है।"
+    }
+   },
+   "darshan": {
+    "timings": "4:00 AM – 11:00 PM",
+    "aarti": [
+     { "label": "Bhasma Aarti", "time": "4:00 AM – 6:00 AM" },
+     { "label": "Morning Aarti", "time": "Around 7:00 AM" },
+     { "label": "Bhog Aarti", "time": "10:30 AM – 11:15 AM" },
+     { "label": "Evening Aarti", "time": "6:30 PM – 7:15 PM" },
+     { "label": "Shayan Aarti", "time": "10:30 PM – 11:00 PM" },
+     {
+      "label": "Temple Closing",
+      "time": "3:00 PM – 5:00 PM (special rituals)"
+     }
+    ],
+    "booking_link": "https://shrimahakaleshwar.com",
+    "process": "Book 30–45 days in advance. Slots fill within minutes.",
+    "dress_code": {
+     "men": "Traditional dhoti required. Bare chest or angavastram allowed.",
+     "women": "Saree required for Bhasm Aarti / Garbh Grah entry.",
+     "prohibited": ["Jeans", "T-shirts", "Short dresses"]
+    }
+   },
+   "travel": {
+    "airport": "Indore Airport – 53 km",
+    "railway": "Ujjain Junction – 2 km",
+    "bus": "Ujjain Bus Stand",
+    "local_transport": "Auto rickshaw, taxi"
+   },
+   "seasonal_crowd": {
+    "peak": ["Mahashivratri", "Shravan month"],
+    "moderate": ["Summer & winter weekdays"],
+    "low": ["July – September"]
+   },
+   "trip_plan": {
+    "days": 3,
+    "itinerary": [
+     {
+      "label": "Best Time to Visit",
+      "text": "October to March (pleasant weather)"
+     },
+     { "label": "Day 1", "text": "Arrival & Mahakaleshwar Darshan" },
+     {
+      "label": "Day 2",
+      "text": "Visit Kal Bhairav, Mangalnath Temple, Sandipani Ashram and Bade Ganesh Temple"
+     },
+     {
+      "label": "Day 3",
+      "text": "Optional trip to Omkareshwar and Indore sightseeing"
+     }
+    ],
+    "note": "Expect strict security screenings. Carry valid government ID."
+   },
+   "stay": {
+    "budget": {
+     "price_range_inr": "₹1,500 – ₹3,500 per night",
+     "hotels": [{ "name": "Hotel Abika Elite", "distance_from_temple_km": 1.5 }]
+    },
+    "mid": {
+     "price_range_inr": "₹2,000 – ₹4,000 per night",
+     "hotels": [{ "name": "Hotel Satyug Inn", "distance_from_temple_km": 1.2 }]
+    },
+    "luxury": {
+     "price_range_inr": "Above ₹4,000 per night",
+     "hotels": [
+      { "name": "Hotel Bika Elite" },
+      { "name": "Rudraksh Club & Resort" }
+     ]
+    }
+   },
+   "food_nearby": {
+    "restaurants": [
+     { "name": "Mallikarjuna Sadan Food Court" },
+     { "name": "Kritunga Restaurant" },
+     { "name": "Local Dhaba Area" }
+    ],
+    "must_try_dishes": [
+     "Dal Bafla",
+     "Bhutte ka Kees",
+     "Poha-Jalebi",
+     "Malpua",
+     "Rabri"
+    ],
+    "local_food_note": "Traditional vegetarian cuisine widely available near the temple."
+   },
+   "festivals": ["Mahashivratri", "Shiv Navratri", "Grand Diwali celebrations"],
+   "approx_cost_inr": "₹6,000 – ₹15,000+",
+   "best_time": "October - March",
+   "tips": [
+    "Attend evening aarti",
+    "Carry water in summer",
+    "Dress traditionally",
+    "No mobile photography inside temple",
+    "Carry sufficient cash",
+    "Valid ID proof required"
+   ]
+  },
+
+  {
+   "id": "omkareshwar",
+   "name": { "en": "Omkareshwar", "hi": "ओंकारेश्वर" },
+   "seo": {
+    "title": "Omkareshwar Jyotirlinga Travel Guide",
+    "description": "Complete Omkareshwar temple darshan guide with travel plan, stay, cost and routes."
+   },
+   "location": {
+    "state": "Madhya Pradesh",
+    "city": "Khandwa",
+    "coordinates": { "lat": 22.2413, "lng": 76.1511 },
+    "google_maps": "https://www.google.com/maps/search/omkareshwar+Temple"
+   },
+   "images": [
+    "/images/jyotirlinga/mahakaleshwar/mahakal-temple.jpg",
+    "/images/jyotirlinga/mahakaleshwar/mahakal-lingam.jfif",
+    "/images/jyotirlinga/mahakaleshwar/shri-mahakaleshwar-night.jpg"
+   ],
+   "about": {
+    "en": {
+     "label": "Shri Omkareshwar Jyotirlinga Temple",
+     "text": "Kaaverikaa Narmadyoh Pavitra Samaagame… This sacred Jyotirlinga stands at the confluence of the Narmada and Kaveri rivers. The island formed here resembles the symbol ‘ॐ’. According to legend, Vindhya mountain worshipped Shiva who manifested as Pranav Lingam. The lingam divided into Omkareshwar and Mamleshwar. King Mandhata also meditated here and received Shiva’s blessing. Every Monday a golden palanquin procession takes place, especially grand in Shravan month."
+    },
+    "hi": {
+     "label": "श्री ओंकारेश्वर ज्योतिर्लिंग मंदिर",
+     "text": "कावेरी और नर्मदा के पवित्र संगम पर स्थित यह ज्योतिर्लिंग ‘ॐ’ के आकार वाले द्वीप पर है। पुराणों के अनुसार विंध्य पर्वत की तपस्या से शिव प्रकट हुए। लिंग दो भागों में विभाजित हुआ — ओंकारेश्वर और ममलेश्वर। राजा मंधाता ने भी यहां तप किया था। प्रत्येक सोमवार सुनहरी पालकी यात्रा निकलती है, विशेषकर श्रावण में भव्य रूप से।"
+    }
+   },
+   "darshan": {
+    "timings": "05:00 AM – 09:30 PM",
+    "aarti": [
+     { "label": "Mangal Arti and Bhog", "time": "04:30 AM – 05:00 AM" },
+     { "label": "Mangal Darshan", "time": "05:00 AM – 12:20 PM" },
+     { "label": "Madhyanha Bhog", "time": "12:20 PM – 01:15 PM" },
+     { "label": "Madhyanha Darshan", "time": "01:15 PM – 04:00 PM" },
+     { "label": "Sayamkalin Shringar", "time": "04:00 PM – 04:30 PM" },
+     { "label": "Shringar Darshan", "time": "04:30 PM – 08:30 PM" },
+     { "label": "Shringar Arti", "time": "08:30 PM – 09:00 PM" },
+     { "label": "Shayan Darshan", "time": "09:00 PM – 09:30 PM" }
+    ],
+    "booking_link": "https://shriomkareshwar.org/OnlineTicketBooking.aspx",
+    "process": "VIP or special darshan tickets available at temple counter.",
+    "dress_code": {
+     "men": "Dhoti or kurta-pyjama recommended.",
+     "women": "Saree, salwar suit, or long modest dress.",
+     "prohibited": ["Shorts", "sleeveless tops", "revealing clothing"]
+    }
+   },
+   "travel": {
+    "airport": "Indore Airport – 80 km",
+    "railway": "Omkareshwar Road Station – 12 km",
+    "bus": "Regular buses from Indore & Ujjain",
+    "local_transport": "Auto rickshaw, taxi"
+   },
+   "seasonal_crowd": {
+    "peak": ["Mahashivratri", "Diwali"],
+    "moderate": ["June – September"],
+    "low": ["April – May"]
+   },
+   "trip_plan": {
+    "days": 2,
+    "itinerary": [
+     {
+      "label": "Best Time to Visit",
+      "text": "October to February offers best weather"
+     },
+     {
+      "label": "Day 1",
+      "text": "Visit Omkareshwar Temple and Mamleshwar Temple"
+     },
+     { "label": "Afternoon", "text": "Witness Narmada Aarti at the ghats" },
+     {
+      "label": "Day 2",
+      "text": "Early morning darshan and local exploration"
+     }
+    ],
+    "note": "Check official trust website for updated timings"
+   },
+   "stay": {
+    "budget": {
+     "price_range_inr": "Below ₹1,000 per night",
+     "hotels": [
+      { "name": "Hotel Bholenath" },
+      { "name": "Hotel Moad Mudgal Palace" },
+      { "name": "Ganpati Palace" }
+     ]
+    },
+    "mid": {
+     "price_range_inr": "₹1,000 – ₹2,500 per night",
+     "hotels": [
+      { "name": "Hotel Kanak Shree" },
+      { "name": "Hotel Gurukripa Inn" },
+      { "name": "Rewa Resorts" },
+      { "name": "Hotel Shree Rameshwaram" }
+     ]
+    },
+    "luxury": {
+     "price_range_inr": "₹2,000 – ₹5,000 per night",
+     "hotels": [
+      { "name": "Narmada Hills Resort" },
+      { "name": "Vanasthali Camp and Resort" },
+      { "name": "The Grand Omkara Hotel & Resorts" }
+     ]
+    }
+   },
+   "food_nearby": {
+    "restaurants": [
+     { "name": "Local Temple Bhojanalaya" },
+     { "name": "Narmada Restaurant" },
+     { "name": "Dhaba Area" }
+    ],
+    "must_try_dishes": [
+     "Poha Jalebi",
+     "Sabudana Khichdi",
+     "Thali Meals",
+     "Chikki"
+    ],
+    "local_food_note": "Simple vegetarian meals available near temple."
+   },
+   "festivals": [
+    "Mahashivratri",
+    "Shravan Month",
+    "Narmada Jayanti",
+    "Makar Sankranti"
+   ],
+   "approx_cost_inr": "₹3,000 – ₹6,000",
+   "best_time": "October - March",
+   "tips": [
+    "Attend morning and evening aarti",
+    "Carry Aadhaar card",
+    "Use official VIP counter only",
+    "Dress modestly",
+    "Avoid large bags",
+    "Expect long queues on holidays",
+    "Valid ID proof required"
+   ]
+  },
+
+  {
+   "id": "kedarnath",
+   "name": { "en": "Kedarnath", "hi": "केदारनाथ" },
+   "seo": {
+    "title": "Kedarnath Jyotirlinga Travel Guide",
+    "description": "Complete Kedarnath temple darshan guide with travel plan, stay, cost and routes."
+   },
+   "location": {
+    "state": "Uttarakhand",
+    "city": "Kedarnath",
+    "coordinates": { "lat": 30.7352, "lng": 79.0669 },
+    "google_maps": "https://www.google.com/maps/search/kedarnath+Temple"
+   },
+   "images": [
+    "/images/jyotirlinga/kedarnath/kedarnath-temple.webp",
+    "/images/jyotirlinga/kedarnath/kedarnath-shivling.jpg",
+    "/images/jyotirlinga/kedarnath/kedarnath-night.webp"
+   ],
+   "about": {
+    "en": {
+     "label": "Shri Kedarnath Temple",
+     "text": "After the Mahabharata war, the Pandavas sought Shiva’s forgiveness. Shiva disguised himself as a bull. When Bheem caught the hump, it remained at Kedarnath forming the lingam. Other parts appeared across Panch Kedar. Another legend tells Nar and Narayan requested Shiva to reside here. The temple is believed to date back thousands of years and stands amidst Himalayan glaciers."
+    },
+    "hi": {
+     "label": "श्री केदारनाथ मंदिर",
+     "text": "महाभारत युद्ध के बाद पांडवों ने शिव से क्षमा मांगी। शिव बैल के रूप में छिपे। भीम ने कूबड़ पकड़ा जो केदारनाथ में लिंग रूप में प्रकट हुआ। अन्य भाग पंच केदार में प्रकट हुए। नर-नारायण की तपस्या से भी शिव यहां स्थायी हुए। मंदिर हिमालयी ग्लेशियरों के बीच स्थित प्राचीन तीर्थ है।"
+    }
+   },
+   "darshan": {
+    "timings": "05:00 AM – 09:30 PM",
+    "aarti": [
+     { "label": "Morning Maha Abhishek", "time": "04:00 AM" },
+     { "label": "General Darshan (Morning)", "time": "6:00 AM – 3:00 PM" },
+     { "label": "Temple Break", "time": "3:00 PM – 5:00 PM" },
+     { "label": "Evening Shayan Aarti", "time": "6:30 PM – 7:00 PM" },
+     { "label": "General Darshan (Evening)", "time": "5:00 PM – 7:00 PM" }
+    ],
+    "booking_link": "https://registration.uk.gov.in",
+    "process": "Biometric registration mandatory for Char Dham Yatra.",
+    "dress_code": {
+     "men": "Modest clothing covering arms and legs.",
+     "women": "Modest clothing covering arms and legs.",
+     "prohibited": []
+    }
+   },
+   "travel": {
+    "airport": "Dehradun Jolly Grant Airport",
+    "railway": "Rishikesh – 216 km",
+    "bus": "Regular buses from Delhi/Haridwar to Sonprayag",
+    "helicopter": "Helicopter services from Phata/Guptkashi (₹9,500+)",
+    "local_transport": "Taxi, trek, pony"
+   },
+   "seasonal_crowd": {
+    "peak": ["Opening season", "May–June"],
+    "moderate": ["September–October"],
+    "low": ["April–May"]
+   },
+   "trip_plan": {
+    "days": "5 to 7",
+    "itinerary": [
+     {
+      "label": "Best Time to Visit",
+      "text": "May–June and September–October"
+     },
+     {
+      "label": "Day 1",
+      "text": "Reach Rishikesh/Haridwar and attend Ganga Aarti"
+     },
+     { "label": "Day 2", "text": "Drive to Guptkashi or Sonprayag" },
+     { "label": "Day 3", "text": "Trek or helicopter to Kedarnath" },
+     { "label": "Day 4", "text": "Visit Bhairavnath Temple" },
+     { "label": "Day 5", "text": "Return trek and departure" }
+    ],
+    "note": "Carry medicines and warm clothing for altitude"
+   },
+   "stay": {
+    "budget": {
+     "price_range_inr": "₹700–₹800",
+     "hotels": [{ "name": "AVK Tents" }, { "name": "Behl Ashram" }]
+    },
+    "mid": {
+     "price_range_inr": "",
+     "hotels": [{ "name": "GMVN Huts & Tents" }, { "name": "Dharamshalas" }]
+    },
+    "luxury": {
+     "price_range_inr": "",
+     "hotels": [
+      { "name": "Kedar Camp Resorts (Guptkashi)" },
+      { "name": "Hotel Raj (Haridwar)" }
+     ]
+    }
+   },
+   "food_nearby": {
+    "restaurants": [{ "name": "Local Bhojanalaya" }],
+    "must_try_dishes": [
+     "Aloo ke Gutke",
+     "Phaana",
+     "Kafuli",
+     "Mandua Roti",
+     "Bal Mithai",
+     "Singori"
+    ],
+    "local_food_note": "Carry personal snacks as trekking prices are high"
+   },
+   "festivals": [
+    "Opening Ceremony",
+    "Badri-Kedar Utsav",
+    "Diwali Closing Ceremony"
+   ],
+   "approx_cost_inr": "₹7,000 – ₹10,000",
+   "best_time": "May–June & Sept–Oct",
+   "tips": [
+    "Online registration mandatory",
+    "Avoid monsoon season",
+    "Pack heavy woolens",
+    "Acclimatize before trekking",
+    "Carry cash",
+    "Avoid large bags",
+    "Respect temple rules"
+   ]
+  },
+
+  {
+   "id": "bhimashankar",
+   "name": { "en": "Bhimashankar", "hi": "भीमाशंकर" },
+   "seo": {
+    "title": "Bhimashankar Jyotirlinga Travel Guide",
+    "description": "Complete Bhimashankar temple darshan guide with travel plan, stay, cost and routes."
+   },
+   "location": {
+    "state": "Maharashtra",
+    "city": "Bhorgiri",
+    "coordinates": { "lat": 19.0728, "lng": 73.5331 },
+    "google_maps": "https://www.google.com/maps/search/bhimashankar+Temple"
+   },
+   "images": [
+    "/images/jyotirlinga/Bhimashankar/Bhimashankar-Temple-resized.avif",
+    "/images/jyotirlinga/Bhimashankar/Bhimashankar-Temple-resized.avif",
+    "/images/jyotirlinga/Bhimashankar/Bhimashankar-lingam.webp",
+    "/images/jyotirlinga/Bhimashankar/Bhimashankar.jfif"
+   ],
+   "about": {
+    "en": {
+     "label": "Shri Bhimshankar Temple",
+     "text": "Miles away from urban life, Bhimashankar is both a sacred pilgrimage and a nature sanctuary. The ancient temple houses the sixth Jyotirlinga of Shiva and stands deep in the Sahyadri hills. Surrounded by dense forests, rivers and wildlife, the shrine symbolizes victory of faith over ego. Saint Kaushika Muni performed penance here and Mokshakund Teertha lies behind the temple. Saint Jnaneshwar is also believed to have visited this sacred site."
+    },
+    "hi": {
+     "label": "श्री भीमाशंकर मंदिर",
+     "text": "भीमाशंकर सह्याद्री पर्वतों में स्थित एक प्राचीन ज्योतिर्लिंग तीर्थ है। यह स्थान प्रकृति, वन्यजीव और आध्यात्मिक शांति का संगम है। मंदिर अहंकार पर आस्था की विजय का प्रतीक माना जाता है। मोक्षकुंड तीर्थ मंदिर के पीछे स्थित है और संत ज्ञानेश्वर के दर्शन की कथा भी प्रचलित है।"
+    }
+   },
+   "darshan": {
+    "timings": "04:30 AM – 09:30 PM",
+    "aarti": [
+     { "label": "Kakada Aarti", "time": "4:30 AM" },
+     { "label": "Morning Darshan", "time": "6:00 AM – 12:00 PM" },
+     { "label": "Evening Darshan", "time": "4:00 PM – 9:00 PM" },
+     { "label": "Evening Aarti", "time": "6:30 PM – 7:00 PM" },
+     { "label": "General Darshan", "time": "7:30 PM" }
+    ],
+    "booking_link": "https://temple.yatradham.org/puja-at-bhimashankar",
+    "process": "Special pooja booking available via official temple services.",
+    "dress_code": {
+     "men": "Traditional modest attire recommended.",
+     "women": "Traditional modest attire recommended.",
+     "prohibited": []
+    }
+   },
+   "travel": {
+    "airport": "Pune International Airport",
+    "railway": "Pune Junction / Karjat Station",
+    "bus": "MSRTC buses from Pune & Mumbai",
+    "local_transport": "Taxi, shuttle, walking"
+   },
+   "seasonal_crowd": {
+    "peak": ["Mahashivratri", "Shravan month"],
+    "moderate": ["September – February"],
+    "low": ["March – May"]
+   },
+   "trip_plan": {
+    "days": 1,
+    "itinerary": [
+     { "label": "Best Time to Visit", "text": "October to February is ideal" },
+     { "label": "05:00 AM", "text": "Depart early from Pune/Mumbai" },
+     { "label": "09:30 AM", "text": "Arrive at Bhimashankar" },
+     {
+      "label": "10:00 AM – 12:00 PM",
+      "text": "Temple darshan and exploration"
+     },
+     { "label": "12:30 PM", "text": "Lunch at local eateries" },
+     { "label": "02:00 PM", "text": "Nature walk or wildlife sanctuary visit" },
+     { "label": "04:00 PM", "text": "Return journey" }
+    ],
+    "note": "Drive carefully in ghat sections"
+   },
+   "stay": {
+    "budget": {
+     "price_range_inr": "₹1,000 – ₹1,800",
+     "hotels": [
+      { "name": "Local guest houses" },
+      { "name": "MTDC Bhimashankar" }
+     ]
+    },
+    "mid": {
+     "price_range_inr": "₹2,200 – ₹4,000",
+     "hotels": [
+      { "name": "Blue Mormon Jungle Holiday Resort" },
+      { "name": "Neelam Hills Resort" }
+     ]
+    },
+    "luxury": {
+     "price_range_inr": "₹6,000+",
+     "hotels": [{ "name": "Eshi Resort" }, { "name": "La Moire Resort" }]
+    }
+   },
+   "food_nearby": {
+    "restaurants": [
+     { "name": "Sadanand Snacks & Thali" },
+     { "name": "Shree Nayan Dhaba" }
+    ],
+    "must_try_dishes": ["Pithla Bhakri", "Misal Pav", "Kharwas"],
+    "local_food_note": ""
+   },
+   "festivals": [
+    "Mahashivratri",
+    "Nag Panchami",
+    "Shravan Mondays",
+    "Kartik Poornima"
+   ],
+   "approx_cost_inr": "₹5,500 – ₹9,000",
+   "best_time": "October – February",
+   "tips": [
+    "Avoid night travel in forest zones",
+    "Carry mosquito repellent",
+    "Stick to marked trails",
+    "Pack according to season",
+    "Carry water and snacks"
+   ]
+  },
+
+  {
+   "id": "kashi_vishwanath",
+   "name": { "en": "Kashi Vishwanath", "hi": "काशी विश्वनाथ" },
+   "seo": {
+    "title": "Kashi Vishwanath Jyotirlinga Travel Guide",
+    "description": "Complete Kashi Vishwanath temple darshan guide with travel plan, stay, cost and routes."
+   },
+   "location": {
+    "state": "Uttar Pradesh",
+    "city": "Varanasi",
+    "coordinates": { "lat": 25.3109, "lng": 83.0107 },
+    "google_maps": "https://www.google.com/maps/search/Kashi+Vishwanath+Temple"
+   },
+   "images": [
+    "/images/jyotirlinga/Kash-Vishwanath/Kashi-Vishwanath-Temple-1890.webp",
+    "/images/jyotirlinga/Kash-Vishwanath/kashi-temple.jpg",
+    "/images/jyotirlinga/Kashi-Vishwanath/Kashi-Vishwanath-lingam.jfif",
+    "/images/jyotirlinga/Kash-Vishwanath/lingam.jfif",
+    "/images/jyotirlinga/Kashi-Vishwanath/kashi-vishwanath-corridor.avif"
+   ],
+   "about": {
+    "en": {
+     "label": "Shri Kashi Vishwanath Temple",
+     "text": "Kashi Vishwanath is the most revered among the twelve Jyotirlingas and has existed since ancient times. Considered the eternal seat of Shiva and Parvati, it is mentioned in the Mahabharata and the Upanishads. Over centuries, the temple experienced multiple cycles of destruction and reconstruction under different rulers. The present structure was rebuilt in the 18th century and remains one of the most sacred pilgrimage centers in India. The temple corridor and ghats nearby form a major spiritual hub visited by millions each year."
+    },
+    "hi": {
+     "label": "श्री काशी विश्वनाथ मंदिर",
+     "text": "काशी विश्वनाथ मंदिर बारह ज्योतिर्लिंगों में सबसे प्रमुख माना जाता है और प्राचीन काल से काशी में स्थित है। इसे शिव और पार्वती का अनादि स्थान माना जाता है। महाभारत और उपनिषदों में इसका उल्लेख मिलता है। इतिहास में मंदिर ने कई बार निर्माण और पुनर्निर्माण का दौर देखा। वर्तमान मंदिर 18वीं शताब्दी में पुनर्निर्मित हुआ और आज भारत के सबसे पवित्र तीर्थ स्थलों में से एक है। मंदिर परिसर और घाटों का क्षेत्र आध्यात्मिक ऊर्जा का प्रमुख केंद्र है।"
+    }
+   },
+   "darshan": {
+    "timings": "2:30 AM – 11:00 PM",
+    "aarti": [
+     { "label": "Mangla Aarti", "time": "3:00 AM – 4:00 AM" },
+     { "label": "Sugam Darshan", "time": "6:00 AM – 6:00 PM" },
+     { "label": "Bhog Aarti", "time": "11:15 AM – 12:20 PM" },
+     { "label": "Saptirishi Aarti", "time": "7:00 PM – 8:15 PM" },
+     { "label": "Night Shringar Aarti", "time": "9:00 PM – 10:15 PM" },
+     { "label": "Shayan Aarti", "time": "10:30 PM – 11:00 PM" }
+    ],
+    "booking_link": "https://kashi.gov.in/listing-details/shri-kashi-vishwanath",
+    "process": "Online booking recommended. Counter tickets available depending on crowd.",
+    "dress_code": {
+     "men": "Dhoti-kurta required for Sparsh Darshan",
+     "women": "Saree required for Sparsh Darshan",
+     "prohibited": ["Mobile phones", "cameras", "bags", "electronics", "shoes"]
+    }
+   },
+   "travel": {
+    "airport": "Lal Bahadur Shastri Airport – 25 km",
+    "railway": "Varanasi Junction / Banaras Station",
+    "bus": "Varanasi Bus Stand",
+    "local_transport": "Auto rickshaw, taxi, walking"
+   },
+   "seasonal_crowd": {
+    "peak": ["Mahashivratri", "Shravan month"],
+    "moderate": ["October – February"],
+    "low": ["March – May"]
+   },
+   "trip_plan": {
+    "days": 3,
+    "itinerary": [
+     {
+      "label": "Best Time to Visit",
+      "text": "October to March offers pleasant weather"
+     },
+     {
+      "label": "Day 1",
+      "text": "Arrival in Varanasi and Ganga Aarti at Dashashwamedh Ghat"
+     },
+     {
+      "label": "Day 2",
+      "text": "Early morning temple darshan and city temple tour"
+     },
+     { "label": "Day 3", "text": "Local markets and departure" }
+    ],
+    "note": "Buy Banarasi silk before leaving"
+   },
+   "stay": {
+    "budget": {
+     "price_range_inr": "₹450 – ₹1,500",
+     "hotels": [
+      { "name": "Southern Grand Kashi" },
+      { "name": "Jai Radhe Krishan Homestay" },
+      { "name": "Family Guest House" }
+     ]
+    },
+    "mid": {
+     "price_range_inr": "₹2,500 – ₹6,000",
+     "hotels": [
+      { "name": "Hotel Alka" },
+      { "name": "Hotel Bagla Atithi Banaras" },
+      { "name": "Hotel Heaven Heritage" }
+     ]
+    },
+    "luxury": {
+     "price_range_inr": "₹15,000+",
+     "hotels": [
+      { "name": "BrijRama Palace" },
+      { "name": "Taj Ganges" },
+      { "name": "Amritara Suryauday Haveli" }
+     ]
+    }
+   },
+   "food_nearby": {
+    "restaurants": [
+     { "name": "Satkar Family Restaurant" },
+     { "name": "Mitra Da Dhaba" },
+     { "name": "Khadak Singh Da Dhaba" }
+    ],
+    "must_try_dishes": [
+     "Palak Patta Chaat",
+     "Tamatar Chaat",
+     "Kachori Sabzi",
+     "Banarasi Lassi"
+    ],
+    "local_food_note": "Blue Lassi Shop near Manikarnika Ghat is famous worldwide."
+   },
+   "festivals": [
+    "Mahashivratri",
+    "Dev Deepawali",
+    "Shravan Mondays",
+    "Kartik Poornima"
+   ],
+   "approx_cost_inr": "₹8,000 – ₹15,000",
+   "best_time": "October – March",
+   "tips": [
+    "Use Kashi Vishwanath Corridor entry gates",
+    "Expect long queues on Mondays",
+    "Keep electronics in lockers",
+    "Arrive early morning for peaceful darshan"
+   ]
+  },
+
+  {
+   "id": "trimbakeshwar",
+   "name": { "en": "Trimbakeshwar", "hi": "त्र्यंबकेश्वर" },
+   "seo": {
+    "title": "Trimbakeshwar Jyotirlinga Travel Guide",
+    "description": "Complete Trimbakeshwar temple darshan guide with travel plan, stay, cost and routes."
+   },
+   "location": {
+    "state": "Maharashtra",
+    "city": "Nashik",
+    "coordinates": { "lat": 19.9406, "lng": 73.5291 },
+    "google_maps": "https://www.google.com/maps/search/trimbakeshwar+Temple"
+   },
+   "images": [
+    "/images/jyotirlinga/Trimbakeshwar/Trimbakeshwar_Temple.jpg",
+    "/images/jyotirlinga/Trimbakeshwar/Trimbakeshwar_lingam.jpg",
+    "/images/jyotirlinga/Trimbakeshwar/Trimbakeshwar_linga_og.jpg",
+    "/images/jyotirlinga/Trimbakeshwar/Trimbakeshwar_nightView.jpg"
+   ],
+   "about": {
+    "en": {
+     "label": "Shri Trimbakeshwar Temple",
+     "text": "Trimbakeshwar Temple stands near Brahmagiri mountain, the origin of the Godavari River. Built by Peshwa Balaji Bajirao in the 18th century, it houses one of the twelve Jyotirlingas. The temple is deeply connected with Sant Nivruttinath and the Varkari tradition. Pilgrims gather in large numbers during his yatra. The temple trust maintains bhakta niwas facilities and continues to preserve this major spiritual center."
+    },
+    "hi": {
+     "label": "श्री त्र्यंबकेश्वर मंदिर",
+     "text": "त्र्यंबकेश्वर मंदिर ब्रह्मगिरि पर्वत के पास स्थित है जहाँ से गोदावरी नदी निकलती है। इसका निर्माण पेशवा बालाजी बाजीराव ने करवाया था। यह बारह ज्योतिर्लिंगों में से एक है और संत निवृत्तिनाथ व वारकरी परंपरा से गहराई से जुड़ा है। मंदिर ट्रस्ट भक्त निवास सुविधाएँ संचालित करता है और यह एक प्रमुख आध्यात्मिक केंद्र है।"
+    }
+   },
+   "darshan": {
+    "timings": "5:30 AM – 9:00 PM",
+    "aarti": [
+     { "label": "Kakad Aarti", "time": "5:30 AM" },
+     { "label": "Morning Aarti", "time": "8:00 AM – 9:00 AM" },
+     { "label": "Golden Crown Darshan", "time": "4:30 PM – 5:00 PM" },
+     { "label": "Evening Aarti", "time": "7:00 PM – 9:00 PM" },
+     { "label": "General Darshan", "time": "5:30 AM – 9:00 PM" }
+    ],
+    "booking_link": "https://trimbakeshwartrust.com/onlinevip",
+    "process": "VIP darshan available online or at temple counter.",
+    "dress_code": {
+     "men": "White dhoti/pancha required inside sanctum.",
+     "women": "Saree or salwar kameez preferred.",
+     "prohibited": [
+      "Footwear",
+      "Leather items",
+      "Electronics",
+      "Photography",
+      "Smoking",
+      "Alcohol"
+     ]
+    }
+   },
+   "travel": {
+    "airport": "Nashik Airport",
+    "railway": "Nashik Road Station",
+    "bus": "MSRTC buses from Nashik",
+    "local_transport": "Auto rickshaw, taxi"
+   },
+   "seasonal_crowd": {
+    "peak": ["Mahashivratri", "Shravan month", "Kumbh Mela"],
+    "moderate": ["November – February"],
+    "low": ["March – May"]
+   },
+   "trip_plan": {
+    "days": "1 or 2",
+    "itinerary": [
+     { "label": "Best Time to Visit", "text": "October to March is ideal" },
+     {
+      "label": "Day 1 Morning",
+      "text": "Holy dip at Kushavarta Kund and temple darshan"
+     },
+     {
+      "label": "Day 1 Afternoon",
+      "text": "Visit Gorakhnath cave and Gangadwar"
+     },
+     {
+      "label": "Day 1 Evening",
+      "text": "Return to Nashik and explore Panchavati"
+     }
+    ],
+    "note": "Drive carefully in ghat roads"
+   },
+   "stay": {
+    "budget": {
+     "price_range_inr": "₹500 – ₹1,500",
+     "hotels": [
+      { "name": "Niranjani Akhada Bhaktnivas" },
+      { "name": "Sant Niwas" }
+     ]
+    },
+    "mid": {
+     "price_range_inr": "₹2,500 – ₹4,000",
+     "hotels": [
+      { "name": "Hotel Krushna Inn" },
+      { "name": "Hotel Dhruv Palace" },
+      { "name": "Hotel Heaven Heritage" }
+     ]
+    },
+    "luxury": {
+     "price_range_inr": "₹4,000+",
+     "hotels": [{ "name": "Soma Vine Village" }, { "name": "Amoha Villas" }]
+    }
+   },
+   "food_nearby": {
+    "restaurants": [
+     { "name": "Hariom Dhaba" },
+     { "name": "Pangat Bhojanalaya" },
+     { "name": "Hotel Tiger Valley" }
+    ],
+    "must_try_dishes": [
+     "Misal Pav",
+     "Nashik Chivda",
+     "Grapes & Raisins",
+     "Papad Churi"
+    ],
+    "local_food_note": "Local bhojanalayas serve traditional Maharashtrian meals."
+   },
+   "festivals": [
+    "Mahashivratri",
+    "Kumbh Mela",
+    "Shravan Mondays",
+    "Nag Panchami"
+   ],
+   "approx_cost_inr": "₹2,000 – ₹3,000",
+   "best_time": "October – March",
+   "tips": [
+    "Visit on weekdays to avoid crowds",
+    "Use state buses for cheap travel",
+    "Stay in temple dharamshalas for budget trips"
+   ]
+  },
+
+  {
+   "id": "vaidyanath",
+   "name": { "en": "Vaidyanath", "hi": "वैद्यनाथ" },
+   "seo": {
+    "title": "Baba Vaidyanath Jyotirlinga Travel Guide",
+    "description": "Complete Vaidyanath temple darshan guide with travel plan, stay, cost and routes."
+   },
+   "location": {
+    "state": "Jharkhand",
+    "city": "Deoghar",
+    "coordinates": { "lat": 24.4829, "lng": 86.6996 },
+    "google_maps": "https://www.google.com/maps/search/vaidyanath+Temple"
+   },
+   "images": [
+    "/images/jyotirlinga/vaidyanath/vaidyanath-temple.jfif",
+    "/images/jyotirlinga/vaidyanath/Vaidyanath-linga.jpeg",
+    "/images/jyotirlinga/vaidyanath/baba-baidyanath-dham-night.webp"
+   ],
+   "about": {
+    "en": {
+     "label": "Shri Baba Vaidyanath Temple",
+     "text": "Baidyanath Dham in Deoghar is widely accepted as the site of the Vaidyanath Jyotirlinga. According to Shiva Purana, Ravana performed intense penance and offered his heads to Shiva. Pleased, Shiva healed him, earning the name Vaidyanath — the divine healer. The Atmalinga later established itself at Deoghar after divine intervention. The shrine is believed to cure illnesses and is called Arogya Baidyanath in ancient texts. Devotees from across India visit especially during the Shravani Mela."
+    },
+    "hi": {
+     "label": "श्री बाबा बैद्यनाथ मंदिर",
+     "text": "देवघर स्थित बैद्यनाथ धाम को वैद्यनाथ ज्योतिर्लिंग का स्थान माना जाता है। शिव पुराण के अनुसार रावण की कठोर तपस्या से प्रसन्न होकर भगवान शिव ने उसे स्वस्थ किया और वैद्यनाथ कहलाए। आत्मलिंग यहीं स्थापित हुआ। मत्स्य पुराण में इसे आरोग्य बैद्यनाथ कहा गया है, जहाँ शिव रोगों का नाश करते हैं। श्रावणी मेले में लाखों श्रद्धालु यहाँ आते हैं।"
+    }
+   },
+   "darshan": {
+    "timings": "04:00 AM – 09:00 PM",
+    "aarti": [
+     { "label": "Kakad Aarti", "time": "04:00 AM" },
+     { "label": "Abhishek & Shodashopachar", "time": "04:15 – 05:30 AM" },
+     { "label": "General Darshan", "time": "05:30 AM – 02:00 PM" },
+     { "label": "Temple Break", "time": "02:00 – 03:30 PM" },
+     { "label": "Sandhya Aarti", "time": "06:00 PM" },
+     { "label": "Shringar Puja", "time": "06:10 – 07:30 PM" },
+     { "label": "Shayan Aarti", "time": "08:00 – 09:00 PM" }
+    ],
+    "booking_link": "https://babadham.org",
+    "process": "General darshan is free. Special puja booking available at official temple counters.",
+    "dress_code": {
+     "men": "Dhoti or kurta-pajama preferred for rituals.",
+     "women": "Saree or salwar kameez with dupatta.",
+     "prohibited": [
+      "Footwear",
+      "Leather items",
+      "Electronics",
+      "Photography",
+      "Smoking",
+      "Alcohol"
+     ]
+    }
+   },
+   "travel": {
+    "airport": "Deoghar Airport",
+    "railway": "Deoghar Junction / Jasidih Junction",
+    "bus": "Regular buses to Deoghar",
+    "local_transport": "Auto rickshaw, taxi"
+   },
+   "seasonal_crowd": {
+    "peak": ["Shravani Mela", "Mahashivratri", "Mondays"],
+    "moderate": ["October – March"],
+    "low": ["April – June"]
+   },
+   "trip_plan": {
+    "days": "1 or 2",
+    "itinerary": [
+     {
+      "label": "Best Time to Visit",
+      "text": "October to March offers pleasant weather"
+     },
+     { "label": "Day 1", "text": "Arrival in Deoghar and local sightseeing" },
+     {
+      "label": "Day 2",
+      "text": "Early morning temple darshan and Basukinath visit"
+     }
+    ],
+    "note": "VIP pass available to reduce waiting time"
+   },
+   "stay": {
+    "budget": {
+     "price_range_inr": "₹500 – ₹1,500/night",
+     "hotels": [
+      { "name": "Hotel Yatrik" },
+      { "name": "Geetanjali International" },
+      { "name": "Dharamshalas" }
+     ]
+    },
+    "mid": {
+     "price_range_inr": "₹1,500 – ₹3,000/night",
+     "hotels": [
+      { "name": "Hotel Mahadev Palace" },
+      { "name": "Hotel Chariot Inn" },
+      { "name": "Hotel Shivam International" }
+     ]
+    },
+    "luxury": {
+     "price_range_inr": "₹3,000+ per night",
+     "hotels": [
+      { "name": "Ishaan Sarovar Portico" },
+      { "name": "Select Medha Plaza" },
+      { "name": "The Grand Sona" }
+     ]
+    }
+   },
+   "food_nearby": {
+    "restaurants": [
+     { "name": "Twilight Restaurant" },
+     { "name": "Samahaar Food Court" },
+     { "name": "Marwari Bhojnalayas" }
+    ],
+    "must_try_dishes": [
+     "Deoghar Peda",
+     "Dahi Chura",
+     "Satvik Thali",
+     "Local Mithai"
+    ],
+    "local_food_note": "Deoghar peda is the most famous sweet near the temple."
+   },
+   "festivals": [
+    "Shravani Mela",
+    "Mahashivratri",
+    "Basant Panchami",
+    "Makar Sankranti"
+   ],
+   "approx_cost_inr": "₹1,100 – ₹7,000",
+   "best_time": "October – March",
+   "tips": [
+    "Reach temple by 4 AM for smoother darshan",
+    "Book pujas only at official counters",
+    "Carry simple clothing and walk barefoot carefully",
+    "Visit Basukinath as traditional pairing"
+   ]
+  },
+  {
+   "id": "nageshwar",
+   "name": { "en": "Nageshwar", "hi": "नागेश्वर" },
+   "seo": {
+    "title": "Nageshwar Jyotirlinga Travel Guide",
+    "description": "Complete Nageshwar temple darshan guide with travel plan, stay, cost and routes."
+   },
+   "location": {
+    "state": "Gujarat",
+    "city": "Devbhoomi Dwarka",
+    "coordinates": { "lat": 22.4669, "lng": 69.0743 },
+    "google_maps": "https://www.google.com/maps/search/nageshwar+Temple"
+   },
+   "images": [
+    "/images/jyotirlinga/nageshwar/nageshwar-temple.jfif",
+    "/images/jyotirlinga/nageshwar/nageswar-lingam.jpeg",
+    "/images/jyotirlinga/nageshwar/nageshwar_temple_night_view.avif"
+   ],
+   "about": {
+    "en": {
+     "label": "Shri Nageshwar Temple",
+     "text": "Nageshwar Jyotirlinga is a famous old temple near Dwarka in Gujarat as this temple is for Lord Shiva. People call it Nageshwar Mahadev Temple or Shri Nageshvar Jyotirling. It is one of the 12 Jyotirlinga places in India. That means many people think it is very holy. The temple sits by the sea and the land near it is called Daarukavana in old stories. People come here to pray for health and to stay safe from harm. Many believe the Nageshwar Jyotirlinga stops poison and protects from snake bites—this is part of the old tales about the place. <br>temple you see today has halls where people stand and a small inner room where the Shiva lingam is kept as There is a big statue of Lord Shiva near the temple that many people like to click photos with. Devotees visit all year. Big crowds come during Maha Shivaratri and other festival days. If you want peace and a strong spiritual feel, this place is for you. <br>The story of Nageshwar Jyotirlinga is very old. Old books like the Shiva Purana tell a tale of a demon named Daruka. Daruka lived in a forest called Darukavana. He trapped many good people. One man, Supriya, kept chanting the name of Shiva. Shiva came and freed the people. A bright Jyotirlinga appeared there. People have worshipped that lingam since then as This is why the place is called Nageshwar Mahadev Temple and why it is one of the twelve Jyotirlinga sites. <br>The temple is near the sea at Dwarka. This gives the temple a calm, open feel. The shrine sits close to water and small islands. Many visitors feel the ocean adds to the peace. The main Shiva lingam is kept in a small inner room as Devotees touch their foreheads to the ground and offer flowers and water. A very large statue of Lord Shiva sits outside the temple and is a landmark for photos."
+    },
+    "hi": {
+     "label": "श्री नागेश्वर मंदिर",
+     "text": "गुजरात के द्वारका के पास स्थित नागेश्वर ज्योतिर्लिंग भगवान शिव का प्रसिद्ध प्राचीन मंदिर है । लोग इसे नागेश्वर महादेव मंदिर या श्री नागेश्वर ज्योतिर्लिंग कहते हैं । यह भारत के 12  ज्योतिर्लिंगों में से एक है । इसका अर्थ है कि बहुत से लोग इसे अत्यंत पवित्र मानते हैं। यह मंदिर समुद्र के किनारे स्थित है और इसके आसपास की भूमि को प्राचीन कथाओं में दारुकवन कहा जाता है । लोग यहां स्वास्थ्य लाभ और सुरक्षा के लिए प्रार्थना करने आते हैं। कई लोगों का मानना ​​है कि नागेश्वर ज्योतिर्लिंग विष का प्रभाव दूर करता है और सांप के काटने से बचाता है - यह इस स्थान से जुड़ी प्राचीन कथाओं का हिस्सा है। <br>आज आप जिस मंदिर को देखते हैं, उसमें खड़े होने के लिए हॉल हैं और एक छोटा सा भीतरी कमरा है जहाँ शिवलिंग स्थापित है। मंदिर के पास भगवान शिव की एक विशाल प्रतिमा है जिसके साथ कई लोग तस्वीरें खिंचवाना पसंद करते हैं। श्रद्धालु साल भर दर्शन के लिए आते हैं। महाशिवरात्रि और अन्य त्योहारों के दौरान भारी भीड़ उमड़ती है। यदि आप शांति और आध्यात्मिक अनुभूति चाहते हैं, तो यह स्थान आपके लिए ही है। नागेश्वर ज्योतिर्लिंग की कथा बहुत प्राचीन है। शिव पुराण जैसे प्राचीन ग्रंथों में दारुका नामक एक राक्षस की कहानी मिलती है। दारुका दारुकावन नामक वन में रहता था। उसने कई भले लोगों को बंदी बना लिया था। सुप्रिया नामक एक व्यक्ति शिव का नाम जपता रहा। शिव आए और उन्होंने लोगों को मुक्त कराया। वहां एक तेजस्वी ज्योतिर्लिंग प्रकट हुआ। तब से लोग उस लिंगम की पूजा करते आ रहे हैं। यही कारण है कि इस स्थान को नागेश्वर महादेव मंदिर कहा जाता है और यह बारह ज्योतिर्लिंग स्थलों में से एक है। <br>द्वारका में स्थित यह मंदिर समुद्र के किनारे पर है। इससे मंदिर में एक शांत और खुलापन का एहसास होता है। यह मंदिर पानी और छोटे द्वीपों के निकट स्थित है। कई श्रद्धालु समुद्र की उपस्थिति से शांति का अनुभव करते हैं। मुख्य शिवलिंग एक छोटे से भीतरी कमरे में रखा गया है, जहां श्रद्धालु अपना माथा जमीन से छूते हैं और फूल-जल चढ़ाते हैं। मंदिर के बाहर भगवान शिव की एक विशाल प्रतिमा स्थापित है, जो तस्वीरों के लिए एक प्रमुख आकर्षण है।"
+    }
+   },
+   "darshan": {
+    "timings": "5:30 AM to 9:30 PM",
+    "aarti": [
+     { "label": "Mangal Aarti", "time": "05:00 AM to 05:30 AM" },
+     { "label": "Morning Darshan", "time": "06:00 AM to 12:30 PM" },
+     { "label": "Maha Bhog", "time": "12:00 PM to 12:30 PM" },
+     { "label": "Madhya Snana", "time": "04:00 PM to 04:30 PM" },
+     { "label": "Evening Darshan", "time": "05:00 PM to 09:00 PM" },
+     { "label": "Shayan Aarti", "time": "08:30 PM to 09:00 PM" },
+     { "label": "Temple closes", "time": "09:00 PM to 09:30 PM" }
+    ],
+    "booking_link": "https://devbhumidwarka.nic.in",
+    "process": "• Online Booking: There is no official central portal for daily darshan. • On-arrival booking available at temple counter (~₹300 per ticket for special Abhishek).",
+    "dress_code": {
+     "men": "Dhoti or Pajama preferred. For Abhishek, remove shirts/vests.",
+     "women": "Saree, salwar kameez, or traditional covered attire.",
+     "prohibited": [
+      "Cameras",
+      "Leather items",
+      "Electronics",
+      "Smoking",
+      "Alcohol",
+      "Non-vegetarian food"
+     ]
+    }
+   },
+   "travel": {
+    "airport": "Porbandar / Jamnagar Airport",
+    "railway": "Dwarka / Okha",
+    "bus": "Beyt Dwarka / Bet Dwarka / Nageshwar",
+    "local_transport": "Auto rickshaw, taxi, bus"
+   },
+   "seasonal_crowd": {
+    "peak": ["Mahashivratri", "Shravan month"],
+    "moderate": ["March – April"],
+    "low": ["April – June"]
+   },
+   "trip_plan": {
+    "days": "2 or 3",
+    "itinerary": [
+     {
+      "label": "Best Time to Visit",
+      "text": "October to March (pleasant winter weather)."
+     },
+     {
+      "label": "Day 1",
+      "text": "Arrival in Dwarka, Dwarkadhish Temple darshan, Gomti Ghat sunset."
+     },
+     {
+      "label": "Day 2",
+      "text": "Nageshwar darshan + Beyt Dwarka ferry + Gopi Talav + Rukmini Temple."
+     },
+     {
+      "label": "Day 3",
+      "text": "Bhadkeshwar Mahadev + Shivrajpur Beach + departure."
+     }
+    ],
+    "note": "Train fares vary ₹470–₹3,600 depending on class."
+   },
+   "stay": {
+    "budget": {
+     "price_range_inr": "₹1,500 – ₹3,500/night",
+     "hotels": [
+      { "name": "Hotel Holiday Icon" },
+      { "name": "Sky Comfort Hotel Mahi" },
+      { "name": "Hotel Barsana" }
+     ]
+    },
+    "mid": {
+     "price_range_inr": "₹4,500 – ₹7,500/night",
+     "hotels": [
+      { "name": "Lemon Tree Premier" },
+      { "name": "VITS Devbhumi" },
+      { "name": "Ginger Dwarka" }
+     ]
+    },
+    "luxury": {
+     "price_range_inr": "₹8,000 – ₹15,000+",
+     "hotels": [{ "name": "Hawthorn Suites" }, { "name": "Fern Sattva Resort" }]
+    }
+   },
+   "food_nearby": {
+    "restaurants": [
+     { "name": "Dwarkadhish Dhaba" },
+     { "name": "Govinda Restaurant" },
+     { "name": "Kant Dining Hall" }
+    ],
+    "must_try_dishes": [
+     "Gujarati Thali",
+     "Vagareli Khichdi",
+     "Gathiya",
+     "Papads",
+     "Dhokra"
+    ],
+    "local_food_note": "Strict vegetarian Kathiyawadi and Gujarati cuisine."
+   },
+   "festivals": ["Mahashivratri", "Shravan month", "Navratri"],
+   "approx_cost_inr": "₹8,500 – ₹10,500",
+   "best_time": "October – March",
+   "tips": [
+    "Stay in Dwarka; accommodation near temple is limited",
+    "Visit Nageshwar + Gopi Talav + Beyt Dwarka together",
+    "Carry cash for offerings and transport",
+    "Photography allowed only outside sanctum"
+   ]
+  },
+
+  {
+   "id": "rameshwaram",
+   "name": { "en": "Ramanathaswamy", "hi": "रामेश्वरम" },
+   "seo": {
+    "title": "Ramanathaswamy Temple Travel Guide",
+    "description": "Complete Rameshwaram temple darshan guide with travel plan, stay, cost and routes."
+   },
+   "location": {
+    "state": "Tamil Nadu",
+    "city": "Rameswaram (Pamban Island)",
+    "coordinates": { "lat": 9.2881, "lng": 79.3129 },
+    "google_maps": "https://www.google.com/maps/search/rameshwaram+Temple"
+   },
+   "images": [
+    "/images/jyotirlinga/Ramanathaswamy/rameshwaram-temple.webp",
+    "/images/jyotirlinga/Ramanathaswamy/Ramanathaswamy-Temple-rameswaram.png",
+    "/images/jyotirlinga/Ramanathaswamy/Ramanathaswamy_lingam1.webp",
+    "/images/jyotirlinga/Ramanathaswamy/ramanathaswamy_lingam.jpeg"
+   ],
+   "about": {
+    "en": {
+     "label": "Shri Ramanathaswamy Temple",
+     "text": "The Holy abode of the Hindu God, Shri Ram (addressed so with all respect & humility) is a virtual paradise for the devout. No Hindu’s journey is complete without a pilgrimage to both Varanasi and Rameswaram for the culmination of his quest for salvation and is hallowed by the epic ‘Ramayana’. Folklore mentions about God Ram’s presence in this land, after his 14-year exile. <br>Local legend has it that Shri Ram was helped back into Rameswaram and into India by his brother Lakshman and Hanuman along with his band of thousands of monkeys, after finally emerging victorious against the demon – Ravana. They helped build a bridge with rocks from the sea and shores to cross the ‘Sethu canal’ and reach Lanka. Lord Rama is also believed to have sanctified this place by worshipping and glorifying Lord Shiva and hence marks the confluence of Shaivism and Vaishnavism and is thus revered by both Shaivites and Vaishnavites alike and thus there is a strong belief that bathing in the 22 ‘Theerthams’ or natural springs is a step forward in enlightenment. Therefore, Rameswaram has rightly been declared as one of the National Pilgrim Centres in the count. <br>The Ramanathaswamy temple by itself is a delight for every tourist. With its magnificent, imposing structure, long corridors, aesthetically carved pillars, the temple is adorned with a towering 38-metre ‘Gopuram’. The temple itself was built by rulers since the 12th century with Sethupathy Maravar beginning the construction of the grand Ramanathaswamy temple that boasts of the ‘Third Corridor’, completed by his successor, Maravar – the longest one in Asia with a 197-metre span from East to West and a 133-metre span from South to North, the third largest in the world! It is said that Swamy Vivekananda offered prayers at this temple in 1897. It is also one of the twelve Jyothirlinga temples, where Shiva is worshipped in the form of a Jyotirlingam."
+    },
+    "hi": {
+     "label": "श्री रामानथस्वामी मंदिर",
+     "text": "हिंदू देवता श्री राम (जिन्हें अत्यंत आदर और विनम्रता से इसी नाम से पुकारा जाता है) का पवित्र निवास स्थान भक्तों के लिए स्वर्ग के समान है। मोक्ष प्राप्ति के लिए वाराणसी और रामेश्वरम की तीर्थयात्रा के बिना किसी भी हिंदू की यात्रा पूर्ण नहीं होती, और यह यात्रा महाकाव्य 'रामायण' द्वारा पवित्र की गई है। लोककथाओं में 14 वर्ष के वनवास के बाद भगवान राम की इस भूमि पर उपस्थिति का उल्लेख मिलता है। <br>स्थानीय लोककथाओं के अनुसार, राक्षस रावण पर विजय प्राप्त करने के बाद, श्री राम को उनके भाई लक्ष्मण और हनुमान ने हजारों वानरों के अपने दल के साथ रामेश्वरम और भारत में वापस लाने में सहायता की। उन्होंने समुद्र और तटों से पत्थरों का उपयोग करके सेतु नहर को पार करने और लंका पहुँचने में मदद की। ऐसा माना जाता है कि भगवान राम ने भगवान शिव की पूजा और महिमा करके इस स्थान को पवित्र किया, जिससे यह शैव और वैष्णव धर्म का संगम स्थल बन गया है। इस प्रकार, शैव और वैष्णव दोनों ही इसे समान रूप से पूजते हैं और यहाँ यह दृढ़ मान्यता है कि 22 तीर्थों या प्राकृतिक झरनों में स्नान करना ज्ञान प्राप्ति की दिशा में एक कदम है। इसलिए, रामेश्वरम को देश के राष्ट्रीय तीर्थ केंद्रों में से एक घोषित करना बिल्कुल उचित है। <br>रामनाथस्वामी मंदिर अपने आप में हर पर्यटक के लिए एक अद्भुत आकर्षण है। अपनी भव्य और विशाल संरचना, लंबे गलियारों, कलात्मक रूप से तराशे गए स्तंभों के साथ, यह मंदिर 38 मीटर ऊंचे 'गोपुरम' से सुशोभित है। मंदिर का निर्माण 12वीं शताब्दी से ही शासकों द्वारा किया जाता रहा है। सेतुपति मरावर ने भव्य रामनाथस्वामी मंदिर का निर्माण शुरू किया था, जिसमें 'तीसरा गलियारा' है, जिसे उनके उत्तराधिकारी मरावर ने पूरा किया था। यह एशिया का सबसे लंबा गलियारा है, जिसकी लंबाई पूर्व से पश्चिम तक 197 मीटर और दक्षिण से उत्तर तक 133 मीटर है, और यह विश्व का तीसरा सबसे लंबा गलियारा है! कहा जाता है कि स्वामी विवेकानंद ने 1897 में इस मंदिर में प्रार्थना की थी। यह बारह ज्योतिर्लिंग मंदिरों में से एक है, जहां शिव की ज्योतिर्लिंग के रूप में पूजा की जाती है।"
+    }
+   },
+   "darshan": {
+    "timings": "5:30 AM to 9:00 PM",
+    "aarti": [
+     { "label": "Palliyarai Deepa Arathana", "time": "05:00 AM" },
+     { "label": "Spadigalinga Deepa Arathana", "time": "05:10 A.M" },
+     { "label": "Thiruvananthal Deepa Arathana", "time": "05:45 A.M" },
+     { "label": "Vila Pooja", "time": "07:00 A.M" },
+     { "label": "Kalasanthi Pooja", "time": "10:00A.M" },
+     { "label": "Uchikala Pooja", "time": "12:00 NOON" },
+     { "label": "Sayaratcha Pooja", "time": "06:00 P.M" },
+     { "label": "Arthajama Pooja", "time": "08.30 P.M" },
+     { "label": "Palliyarai Pooja", "time": "08:45 P.M" }
+    ],
+    "booking_link": "https://rameswaramramanathar.hrce.tn.gov.in",
+    "process": "• General: Free. <br>• Special/VIP: ₹200–₹250 (available at counters). <br>• Spatika Linga (5:10 AM - 6:00 AM): ₹50 (report by 4:30 AM). <br>• 22 Wells Bath Fee: ₹25 per person.",
+    "dress_code": {
+     "men": "Must wear dhoti (veshti) with shirt or pyjama. Lungis, jeans, and shorts are not allowed.",
+     "women": "Must wear sarees, salwar kameez, or churidar with dupatta. Avoid short skirts, tight leggings, and dresses.",
+     "prohibited": [
+      "Cameras",
+      "wet clothes",
+      "Leather Items",
+      "Electronic Devices",
+      "Smoking",
+      "drinking",
+      "alcohol"
+     ]
+    }
+   },
+   "travel": {
+    "airport": "Madurai Airport (175 km)",
+    "railway": "Rameswaram station (1.3 km)",
+    "bus": "Rameswaram Bus stand (2 km)",
+    "local_transport": "Auto rickshaw, taxi, bus"
+   },
+   "seasonal_crowd": {
+    "peak": ["Mahashivratri", "Shravan month"],
+    "moderate": ["March – April"],
+    "low": ["April to June"]
+   },
+   "trip_plan": {
+    "days": "2 or 3",
+    "itinerary": [
+     {
+      "label": "Best Time to Visit",
+      "text": "Winter (Best) - October to March, when the weather is pleasant."
+     },
+     {
+      "label": "Day 1: Arrival and The First Dip",
+      "text": "• Morning: Fly from Mumbai (BOM) to Madurai (IXM). Hire a taxi for the 170 km drive to Rameswaram. <br>• Afternoon: Cross the Pamban Bridge. As of early 2026, the historic 1914 bridge is being dismantled, but the New Pamban Bridge—India's first vertical-lift sea bridge—is fully operational for rail traffic. <br>• Evening: Visit Agni Theertham for a sacred dip at sunset before heading to the Ramanathaswamy Temple for evening Darshan (3:00 PM – 8:00 PM)."
+     },
+     {
+      "label": "Day 2: Temple Rituals and Dhanushkodi",
+      "text": "• Early Morning (4:00 AM – 6:00 AM): Participate in the Spatika Lingam Darshan and the ritual bath in the 22 Holy Wells (Theerthams) inside the temple complex. <br>• Late Morning: Drive to Dhanushkodi (approx. 20 km). Explore the ruins of the 'Ghost Town,' including the destroyed church and railway station from the 1964 cyclone. <br>• Afternoon: Visit Arichal Munai, the southernmost tip where the Bay of Bengal meets the Indian Ocean. <br>• Evening: Stop at the Kothandaramaswamy Temple and the APJ Abdul Kalam Memorial on your way back."
+     },
+     {
+      "label": "Day 3: Local Sights and Return",
+      "text": "• Morning: Visit Gandhamadhana Parvatham, the highest point in Rameswaram, for panoramic views and to see Lord Rama's footprints. <br>• Afternoon: Visit the Five-Faced Hanuman Temple, which houses 'floating stones' believed to be from the Ram Setu. <br>• Evening: Drive back to Madurai for your late-evening flight to Mumbai."
+     }
+    ],
+    "note": ""
+   },
+   "stay": {
+    "budget": {
+     "price_range_inr": "₹350 – ₹1,500",
+     "hotels": [
+      { "name": "Maheshwari bakht niwas" },
+      { "name": "Hotel Prem Rameshwaram" },
+      { "name": "Hotel Aalayam Rameshwaram (Yatri Nivas)" }
+     ]
+    },
+    "mid": {
+     "price_range_inr": "₹1,500 – ₹5,500",
+     "hotels": [
+      { "name": "Hotel Arya Grand" },
+      { "name": "Hotel Rameswaram Grand" },
+      { "name": "Vinayaga by Poppys - Rameswaram" }
+     ]
+    },
+    "luxury": {
+     "price_range_inr": "₹7,000 – ₹16,000+",
+     "hotels": [
+      { "name": "The Residency Towers Rameswaram" },
+      { "name": "Daiwik Hotels Rameswaram" }
+     ]
+    }
+   },
+   "food_nearby": {
+    "restaurants": [
+     { "name": "Murugan Mess" },
+     { "name": "Hotel Guru" },
+     { "name": "Ahaan Restaurant - Daiwik Hotels Rameshwara" }
+    ],
+    "must_try_dishes": [
+     "Rameswaram Kootu",
+     "Ghee Podi Idli & Filter Coffee",
+     "Vanjaram Meen Varuval",
+     "baby octopus",
+     "prawns",
+     "crab meat"
+    ],
+    "local_food_note": "Unlimited Meals: Traditionally served on a banana leaf, these include rice, sambar, rasam, kootu, poriyal (dry veg), and appalam."
+   },
+   "festivals": [
+    "Mahashivratri",
+    "Aadi Thirukkalyanam",
+    "Arudhra Darshanam",
+    "Ram Navami"
+   ],
+   "approx_cost_inr": "₹8,500 - ₹12,000",
+   "best_time": "October to March",
+   "tips": [
+    "Theertha Snana: Bathe at Agni Theertham and the 22 wells",
+    "Visit early morning to avoid crowd",
+    "Avoid major festival days if possible",
+    "Buy ₹200 special darshan ticket during rush"
+   ]
+  },
+
+  {
+   "id": "grishneshwar",
+   "name": { "en": "Grishneshwar", "hi": "घृष्णेश्वर" },
+   "seo": {
+    "title": "Grishneshwar Jyotirlinga Travel Guide",
+    "description": "Complete Grishneshwar temple darshan guide with travel plan, stay, cost and routes."
+   },
+   "location": {
+    "state": "Maharashtra",
+    "city": "Aurangabad",
+    "coordinates": { "lat": 20.0268, "lng": 75.1793 },
+    "google_maps": "https://www.google.com/maps/search/grishneshwar+Temple"
+   },
+   "images": [
+    "/images/jyotirlinga/grishneshwar/grishneshwar-temple.jfif",
+    "/images/jyotirlinga/grishneshwar/grishneshwar-lingam.jpg",
+    "/images/jyotirlinga/grishneshwar/grishneshwar-night.jfif"
+   ],
+   "about": {
+    "en": {
+     "label": "Shri Grishneshwar Temple",
+     "text": "The Grishneshwar temple is situated in the tiny village of Verul in the Aurangabad district. Less than a kilometer away from the world-renowned Ellora Caves, the temple is easily accessible to tourists. Needless to say, it is among the most-visited places in Aurangabad. <br>The term ‘Grishneshwara’ holds immense significance as it means ‘Lord of Compassion’. Holy water is said to spring from inside the temple. Devotees halt at the small shrine to Kokila Mata on entering the Grishneshwar Temple.<br>This ancient temple showcases the pre-historic South Indian architectural style and structure. Story has it that in the village of Shivalaya, there lived a brahmin devotee of Shiva named Grishna. She would carve 101 lingas every day and immerse them in the nearby lake in the hopes of bearing a child. After she gave birth to a baby boy, her childless sister proceeded to throw the baby boy in the lake out of jealousy. Despite the grief of losing her child, she continued to carve lingas and worship Shiva.<br>One day, while worshipping, she saw her son standing at the edge of the lake. She then pleaded with the Lord to forgive her sister. Pleased with her purity, Lord Shiva had brought her son back to life and also manifested there in the form of a Jyotirlinga. As a result, the place came to be known as Grishneshwara.<br><b>grishneshwar shiva temple</b><br>Story has it that Maloji Bhosale, a staunch follower of Lord Shiva, found a treasure within a snake pit and devoted it to reconstruct the temple. This ancient site of pilgrimage features exquisite carvings of Gods and Goddesses in red stone.<br>The temple was destroyed in the 13th and 14th centuries amid attacks by Mughal invaders of the Delhi Sultanate. As a result, the temple saw several reconstructions take place to restore the integrity of the structure.<br>The first reconstruction took place in the 16th century, with Maloji Raje Bhosale, the grandfather of Chhatrapati Shivaji Maharaj, taking the initiative. Later, the temple was further restored in the 18th century by Rani Ahilyabhai Holkar, a Maratha princess who ruled Indore from 1765 to 1795."
+    },
+    "hi": {
+     "label": "श्री घृष्णेश्वर मंदिर",
+     "text": "ग्रिशनेश्वर मंदिर औरंगाबाद जिले के वेरुल नामक छोटे से गाँव में स्थित है। विश्व प्रसिद्ध एलोरा गुफाओं से एक किलोमीटर से भी कम दूरी पर स्थित यह मंदिर पर्यटकों के लिए आसानी से सुलभ है। यह कहना गलत नहीं होगा कि यह औरंगाबाद के सबसे अधिक देखे जाने वाले स्थानों में से एक है।<br>'ग्रीशनेश्वर' शब्द का विशेष महत्व है, क्योंकि इसका अर्थ है 'करुणा के देवता'। ऐसा माना जाता है कि मंदिर के भीतर से पवित्र जल निकलता है। भक्त ग्रीशनेश्वर मंदिर में प्रवेश करते समय कोकिला माता के छोटे से मंदिर में दर्शन के लिए रुकते हैं। <br>यह प्राचीन मंदिर दक्षिण भारतीय वास्तुकला शैली और संरचना का उत्कृष्ट उदाहरण है। कथा के अनुसार, शिवालया गाँव में ग्रिश्ना नाम की एक ब्राह्मण शिव भक्त रहती थी। वह प्रतिदिन 101 लिंगों की नक्काशी करती और संतान प्राप्ति की आशा में उन्हें पास की झील में विसर्जित करती थी। जब उसने एक पुत्र को जन्म दिया, तो उसकी निःसंतान बहन ने ईर्ष्यावश उस पुत्र को झील में फेंक दिया। अपने पुत्र को खोने के दुःख के बावजूद, उसने लिंगों की नक्काशी और शिव पूजा जारी रखी।<br>एक दिन पूजा करते समय, उसने अपने पुत्र को झील के किनारे खड़ा देखा। तब उसने भगवान से अपनी बहन को क्षमा करने की प्रार्थना की। उसकी पवित्रता से प्रसन्न होकर, भगवान शिव ने उसके पुत्र को पुनर्जीवित किया और स्वयं वहाँ ज्योतिर्लिंग के रूप में प्रकट हुए। परिणामस्वरूप, उस स्थान को ग्रिशनेश्वर के नाम से जाना जाने लगा। <br><b>ग्रिशनेश्वर शिव मंदिर</b> <br>कहा जाता है कि भगवान शिव के कट्टर भक्त मालोजी भोसले को एक सांपों के बिल में खजाना मिला और उन्होंने उसे मंदिर के पुनर्निर्माण में लगा दिया। इस प्राचीन तीर्थस्थल में लाल पत्थर पर देवी-देवताओं की उत्कृष्ट नक्काशी देखने को मिलती है। <br>दिल्ली सल्तनत के मुगल आक्रमणकारियों के हमलों के दौरान 13वीं और 14वीं शताब्दी में यह मंदिर नष्ट हो गया था। परिणामस्वरूप, संरचना की अखंडता को बहाल करने के लिए मंदिर का कई बार पुनर्निर्माण किया गया। <br>मंदिर का पहला पुनर्निर्माण 16वीं शताब्दी में हुआ, जिसकी पहल छत्रपति शिवाजी महाराज के दादा मालोजी राजे भोसले ने की थी। बाद में, 18वीं शताब्दी में मराठा राजकुमारी रानी अहिल्याबाई होलकर ने मंदिर का और जीर्णोद्धार करवाया, जिन्होंने 1765 से 1795 तक इंदौर पर शासन किया।"
+    }
+   },
+   "darshan": {
+    "timings": "5:30 AM to 9:30 PM",
+    "aarti": [
+     { "label": "Mangal Aarti", "time": "4:00 AM/5:00 AM" },
+     { "label": "Jalhari/Bhog Aarti", "time": "8:00 AM/12:00 PM" },
+     { "label": "Sandhya Aarti", "time": "7:30 PM/8:00 PM" }
+    ],
+    "booking_link": "https://www.grishneshwartemple.com/",
+    "process": "• Sparsh Darshan: Devotees are generally allowed to touch the Shivling for Puja. <br>• Booking Requirements: Name, age, mobile number, and valid ID proof are needed for online booking.  <br>• VIP Darshan/Special Pooja: Can be booked online through Grishneshwartemple.com or Yatradham.org. <br>• Make the online payment and download the confirmation/e-ticket.",
+    "dress_code": {
+     "men": "Must bare-chested to touch the Shivlingam, Wearing a dhoti is preferred, though trousers are allowed in the outer areas.",
+     "women": "Modest Indian traditional attire is recommended, such as sarees, salwar kameez, or churidar with a dupatta.",
+     "prohibited": [
+      "Cameras",
+      "shorts",
+      "mini-skirts",
+      "sleeveless tops",
+      "low-waist jeans",
+      "Smoking",
+      "drinking",
+      "alcohol"
+     ]
+    }
+   },
+   "travel": {
+    "approx_cost_inr": "₹3,500 – ₹5,500 per person (Mumbai trip)",
+    "airport": "Chhatrapati Sambhaji Nagar Airport (IXU) (30 km)",
+    "railway": "Aurangabad Railway Station (AWB) (30 km), Lasur Station (LSR) (15 km)",
+    "bus": "Aurangabad Central Bus Stand (MSRTC)",
+    "local_transport": "Auto rickshaw, taxi, bus"
+   },
+   "seasonal_crowd": {
+    "peak": ["Mahashivratri", "Shravan month", "weekends"],
+    "moderate": ["October to March"],
+    "low": ["April to June"]
+   },
+   "trip_plan": {
+    "days": "2",
+    "itinerary": [
+     {
+      "label": "Best Time to Visit",
+      "text": "Winter (Best) - October to March, when the weather is pleasant."
+     },
+     {
+      "label": "Day 1: Mumbai to Aurangabad/Grishneshwar",
+      "text": "• 05:00 AM: Depart from Mumbai (Borivali/Dadar) to avoid city traffic, taking the NH 160 or Samruddhi Mahamarg. <br>• 01:00 PM: Reach Aurangabad/Verul, check into your hotel, and have lunch. <br>• 03:00 PM: Visit the Daulatabad Fort (15 km from Grishneshwar). <br>• 05:00 PM: Proceed to Grishneshwar Temple for evening Darshan and Aarti. <br>• 07:00 PM: Visit the Bhadra Maruti Temple (nearby). <br>• 08:00 PM: Return to hotel for dinner."
+     },
+     {
+      "label": "Day 2: Ellora Caves and Return",
+      "text": "• 08:00 AM: After breakfast, visit the Ellora Caves (UNESCO site), located just 1–2 km from the temple. Spend 3-4 hours exploring, especially the Kailasa Temple (Cave 16). <br>• 01:00 PM: Lunch in the local area. <br>• 02:00 PM: Start the return journey to Mumbai. <br>• 09:00 PM: Reach Mumbai."
+     }
+    ],
+    "note": "• Avoid Tuesdays: The nearby Ellora Caves are closed on Tuesdays. <br>• The temple is extremely crowded on Mondays, during Shravan month, and on Shivratri."
+   },
+   "stay": {
+    "budget": {
+     "price_range_inr": "₹1,000 – ₹2,000",
+     "hotels": [
+      { "name": "Hotel Nisarg Restaurant and lodging" },
+      { "name": "Hotel Great Annapurna" }
+     ]
+    },
+    "mid": {
+     "price_range_inr": "₹2,500 – ₹5,000",
+     "hotels": [
+      { "name": "Ellora Heritage Resort" },
+      { "name": "Moreshwar Pride & Residency" }
+     ]
+    },
+    "luxury": {
+     "price_range_inr": "₹9,000+",
+     "hotels": [
+      { "name": "Welcomhotel" },
+      { "name": "Vivanta Chhatrapati Sambhaji Nagar" }
+     ]
+    }
+   },
+   "food_nearby": {
+    "restaurants": [
+     { "name": "Garikipati Restaurant" },
+     { "name": "Shelke Mama Dhaba Daulatabad Ellora Road" },
+     { "name": "Surya Hotel" }
+    ],
+    "must_try_dishes": [
+     "Naan Qalia nveg",
+     "Mawa Jalebi",
+     "Maharashtrian Staples",
+     "Misal Pav",
+     "Sabudana Wada",
+     "Puran Poli"
+    ],
+    "local_food_note": "Temple Area: Most restaurants immediately surrounding the temple are pure vegetarian. For non-vegetarian options (like Naan Qalia), look for eateries in Khuldabad or Aurangabad city."
+   },
+   "festivals": [
+    "Mahashivratri",
+    "Shravan Month",
+    "Ellora Festival",
+    "Bhaum Pradosh Vrat",
+    "Guru Purnima"
+   ],
+   "approx_cost_inr": "₹8,500 - ₹12,000",
+   "best_time": "October to March",
+   "tips": [
+    "Arrive before 7:00 AM to avoid long queues",
+    "Use special darshan tickets during peak days",
+    "Book Abhishekam only at official counters",
+    "Combine visit with Ellora and Daulatabad"
+   ]
+  }
+ ]
 }

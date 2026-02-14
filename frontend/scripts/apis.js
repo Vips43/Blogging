@@ -18,10 +18,18 @@ export async function fetchGlobal(params, key, expiry = 600000000) {
         const res = await fetch(url);
         const data = await res.json();
         console.log("fetched", data)
-        localStorage.setItem(key, JSON.stringify({data, timestamp: Date.now(),}))
+        localStorage.setItem(key, JSON.stringify({ data, timestamp: Date.now(), }))
         return data;
     } catch (error) {
         console.error(error)
     }
 }
 
+export async function fetchJyotirlingaa() {
+    const res = await fetch("/data/data.json");
+    const data = await res.json();
+    const jyotirlings = data.jyotirlings;
+    const meta = data.meta;
+    const pilgrim_checklist = data.pilgrim_checklist;
+    return { pilgrim_checklist, meta, jyotirlings, data };
+}
