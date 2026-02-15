@@ -143,7 +143,7 @@ function renderTripPlan(lingam) {
   if (lingam?.trip_plan?.note) {
     const note = document.createElement("p");
     note.className = "mt-2 text-gray-600";
-    note.textContent = lingam.trip_plan.note;
+    note.innerHTML = lingam.trip_plan.note;
     frag.append(note);
   }
 
