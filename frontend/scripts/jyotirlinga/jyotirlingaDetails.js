@@ -78,8 +78,8 @@ function renderAboutTemple(lingam) {
   const h2 = about_temple.querySelector("h2");
   const p = about_temple.querySelector("p");
 
-  h2.innerText = `${lingam?.about?.en?.label}`
-  p.innerText = `${lingam.about?.en?.text}`
+  h2.innerHTML = `${lingam?.about?.en?.label}`
+  p.innerHTML = `${lingam.about?.en?.text}`
 
 }
 function renderAartiDressCodeDetails(lingam) {
