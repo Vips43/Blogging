@@ -3,6 +3,7 @@ import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
+import { error } from "console";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -19,6 +20,16 @@ app.get("/", (req, res) => {
 
 app.use(cors());
 app.use(express.json());
+
+export default function handler(req, res){
+    const filePath = path.join(process.cwd(),"data", "data.son");
+    try{
+        const data = fs.readFileSync(filePath, "utf8");
+        res.status(200).json(JSON.parse(data));
+    } catch{
+        res.status(500).json({error:"falied to read data"})
+    }
+}
 
 const data_path = './data/data.json';
 app.use("/images", express.static(path.join(_dirname, "/images")))
