@@ -4,6 +4,7 @@ const heading = document.getElementById("heading");
 const trip_details = document.getElementById("trip_details");
 const about_temple = document.getElementById("about_temple");
 const aarti_dressCode = document.getElementById("aarti_dressCode");
+const aarti_schedule = document.getElementById("aarti_schedule");
 const trip_plan = document.getElementById("trip_plan");
 const stay_food_guid = document.getElementById("stay_food_guid");
 const pilgrim_tips = document.getElementById("pilgrim_tips");
@@ -99,7 +100,6 @@ function renderAboutTemple(lingam) {
 }
 function renderAartiDressCodeDetails(lingam) {
   const dress = lingam?.darshan?.dress_code
-  const aarti_schedule = aarti_dressCode.querySelector("#aarti_schedule")
   const dress_code = aarti_dressCode.querySelector("#dress_code")
 
   aarti_schedule.innerHTML = ``

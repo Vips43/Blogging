@@ -26,10 +26,11 @@ app.use("/images", express.static(path.join(_dirname, "/images")))
 app.get("/api/temple", (req, res) => {
     fs.readFile(data_path, "utf8", (err, data) => {
         if (err) {
-            return res.status(500).json({ error: "could not redad data" });
+            return res.status(500).json({ error: "could not read data" });
         }
         try {
             res.json(JSON.parse(data));
+            console.log("temple data parsed successfully")
         } catch {
             res.status(500).json({ error: "invalid json file" });
         }

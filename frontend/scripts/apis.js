@@ -28,8 +28,9 @@ export async function fetchGlobal(params, key, expiry = 600000000) {
 export async function fetchJyotirlingaa() {
     const res = await fetch("/api/temple");
     const data = await res.json();
-    const jyotirlings = data.jyotirlings;
-    const meta = data.meta;
-    const pilgrim_checklist = data.pilgrim_checklist;
+    const jyotirlings = data?.jyotirlings;
+    const meta = data?.meta;
+    const pilgrim_checklist = data?.pilgrim_checklist;
+    console.log(data)
     return { pilgrim_checklist, meta, jyotirlings, data };
 }
