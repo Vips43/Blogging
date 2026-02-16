@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (aarti_schedule) renderAartiDressCodeDetails(jyotirlinga[0]);
   if (trip_plan) renderTripPlan(jyotirlinga[0])
   if (stay_food_guid) renderStay_food_Guide(jyotirlinga[0])
-  if (pilgrim_tips) { }
+  if (pilgrim_tips) renderPilgrims(jyotirlinga[0].tips)
 })
 
 function renderHeading(lingam) {
@@ -34,14 +34,14 @@ function renderHeading(lingam) {
   heading.innerHTML = ``
 
   heading.className =
-    "relative h-[40vh] md:h-[70vh] overflow-hidden bg-cover bg-center bg-no-repeat transition-all";
+    "relative h-[80vh] md:h-[60vh] overflow-hidden bg-cover bg-center bg-no-repeat transition-all";
 
   heading.style.backgroundImage = `url('${img}')`;
 
   heading.innerHTML = `
     <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-8 text-white">
       <h1 class="text-4xl font-bold">${lingam.name.en}</h1>
-      <p class="opacity-90">${lingam.location.city}, ${lingam.location.state}</p>
+      <p class="opacity-90 hover:underline cursor-pointer text-cyan-300"><i class="fa-solid fa-location-dot"></i> ${lingam.location.city}, ${lingam.location.state}</p>
     </div>`
 }
 function renderTripDetails(lingam) {
@@ -75,12 +75,27 @@ function renderTripDetails(lingam) {
     `
 }
 function renderAboutTemple(lingam) {
-  const h2 = about_temple.querySelector("h2");
-  const p = about_temple.querySelector("p");
+  const toggler = document.getElementById("toggler_Lang");
+  const h2 = about_temple.querySelector("#about_temple h2");
+  const p = about_temple.querySelector("#desc");
+  const btns = toggler.querySelectorAll("[data-id]");
+  const updateContent = (lang) => {
+    h2.innerHTML = `${lingam?.about?.[lang]?.label}` || "na"
+    p.innerHTML = `${lingam.about?.[lang]?.text}` || "na"
 
-  h2.innerHTML = `${lingam?.about?.en?.label}`
-  p.innerHTML = `${lingam.about?.en?.text}`
+    btns.forEach(btn => {
+      btn.classList.toggle("bg-gray-300", btn.dataset.id === lang)
+    })
+  }
+  updateContent("en");
 
+  toggler.addEventListener("click", (e) => {
+    const target = e.target.closest("[data-id]");
+    if (!target) return;
+
+    const selectedLang = target.dataset.id;
+    updateContent(selectedLang)
+  })
 }
 function renderAartiDressCodeDetails(lingam) {
   const dress = lingam?.darshan?.dress_code
@@ -149,7 +164,6 @@ function renderTripPlan(lingam) {
 
   trip_plan.append(frag);
 }
-
 function renderStay_food_Guide(lingam) {
   const stays = lingam?.stay;
   const foods = lingam?.food_nearby;
@@ -193,4 +207,14 @@ function renderStay_food_Guide(lingam) {
   )).join("")}
   </ul>
   `;
+}
+function renderPilgrims(tips) {
+  const ul = pilgrim_tips.querySelector("ul");
+  ul.innerHTML = ``;
+  tips.forEach(tip => {
+    const li = document.createElement("li");
+    li.innerHTML = tip
+    ul.append(li)
+  })
+
 }

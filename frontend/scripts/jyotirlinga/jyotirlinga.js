@@ -5,7 +5,6 @@ const temples_container = document.getElementById("temples_container");
 async function renderTemplesCard() {
   const info = await fetchJyotirlingaa();
   const { jyotirlings, data } = info
-  console.log(jyotirlings)
 
   temples_container.innerHTML = ``
   const frag = document.createDocumentFragment();
@@ -15,16 +14,16 @@ async function renderTemplesCard() {
     article.className = `bg-white dark:bg-neutral-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-700 group opacity-0 translate-y-10`;
 
     article.innerHTML = `
-      <!-- Image -->
-      <div class="relative h-48 overflow-hidden ">
-      <div class="w-full h-48 flex overflow-x-auto overflow-y-hidden scrollbar-hide snap-x snap-mandatory">
+    <!-- Image -->
+    <div class="relative h-52 overflow-hidden ">
+      <div class="w-full h-52 flex overflow-x-auto overflow-y-hidden scrollbar-hide snap-x snap-mandatory">
       ${lingam.images.map(img => (
       `<div class="shrink-0 h-48 snap-end w-full content-center">
         <img src="${img}" alt="${lingam.name.en}" loading="lazy"
         class=" object-fill h-full w-full mx-auto transition duration-200" />
       </div>`
-    ))}
-        </div>
+      ))}
+      </div>
         <!-- Tag -->
         <span class="absolute top-3 left-3 bg-black/70 text-white text-xs px-3 py-1 rounded-full">
           ${lingam.name.hi}
@@ -41,7 +40,7 @@ async function renderTemplesCard() {
 
         <!-- Location -->
         <p class="text-sm text-gray-500 dark:text-gray-200 flex items-center gap-1">
-          📍 ${lingam.location.city}, ${lingam.location.state}
+          <i class="fa-solid fa-location-dot"></i> ${lingam.location.city}, ${lingam.location.state}
         </p>
 
         <!-- Quick Info -->

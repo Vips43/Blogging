@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
+import fs from "fs";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -17,6 +18,31 @@ app.get("/", (req, res) => {
 })
 
 app.use(cors());
+app.use(express.json());
+
+const data_path = './data/data.json';
+app.use("/images", express.static(path.join(_dirname, "/images")))
+app.get("/api/temple", (req, res) => {
+    fs.readFile(data_path, "utf8", (err, data) => {
+        if (err) {
+            return res.status(500).json({ error: "could not redad data" });
+        }
+        try {
+            res.json(JSON.parse(data));
+        } catch {
+            res.status(500).json({ error: "invalid json file" });
+        }
+    })
+})
+
+app.post("/api/temple", (req, res) => {
+    const newData = req.body;
+
+    fs.writeFile(data_path, JSON.stringify(newData, null, 2), (err) => {
+        if (err) return res.status(500).send("Error saving data");
+        res.send("Data saved successfully");
+    })
+})
 
 
 const cache = {};
@@ -91,6 +117,9 @@ app.get(`/news/:cat`, async (req, res) => {
     res.json(data)
 })
 
+app.get((req, res) => {
+  res.sendFile(path.join(_dirname, "..", "frontend", "index.html"));
+});
 
 app.listen(port, () => {
     console.log("server started on: ", port)
