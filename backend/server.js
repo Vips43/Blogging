@@ -21,10 +21,6 @@ app.use(express.json());
 
 const data_path = './data/data.json';
 
-app.get("/temple",async(req,res)=>{
-    return res.json(data_path)
-})
-
 app.use("/images", express.static(path.join(_dirname, "/public/images")))
 app.get("/api/temple", (req, res) => {
     fs.readFile(data_path, "utf8", (err, data) => {
