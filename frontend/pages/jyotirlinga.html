@@ -11,18 +11,21 @@
 </head>
 
 <body class="dark:bg-neutral-900 bg-white overflow-x-hidden">
-  <nav class="bg-gray-600 select-none dark:bg-gray-800 flex justify-between px-5 text-white items-center p-2 font-roboto">
-    <h3 class="text-2xl font-semibold">My Blog Site</h3>
-    <ul id="navItems"
-      class="flex-1 hidden md:flex justify-center gap-1 text-sm md:text-base md:gap-5 *:capitalize *:hover:text-gray-800 *:hover:bg-gray-300 *:px-2 *:py-1 *:rounded-md *:transition-all *:duration-300 *:cursor-pointer z-90 ">
+  <nav
+    class="relative bg-gray-600 select-none dark:bg-gray-800 flex justify-between text-white items-center py-2 font-roboto">
+    <h3 class="text-2xl font-semibold ml-5">My Blog Site</h3>
+    <ul id="navItems" class="flex-1 hidden md:flex justify-center gap-1 text-sm md:text-base md:gap-5  ">
     </ul>
-    
+
     <!-- side button  -->
-    <button id="mob_btn" class="md:hidden"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-    <ul id="mobileNavItems" class="absolute bg-white text-black right-0 top-12 z-99 transition-all duration-300 translate-x-96 w-2xs space-y-px *:p-1">
-    </ul>
+    <div class="md:hidden relative pr-5">
+      <button id="mob_btn" class=""><i class="fa-solid fa-ellipsis-vertical"></i></button>
+      <ul id="mobileNavItems"
+        class="absolute right-0 top-8 bg-neutral-700 text-white text-center z-99 transition-all duration-300 w-2xs space-y-px *:p-1 *:hover:bg-neutral-700">
+      </ul>
+    </div>
   </nav>
-  
+
   <section class="max-w-7xl mx-auto p-6">
     <h1 class="text-3xl dark:text-white font-bold mb-6">12 Jyotirlinga Temples</h1>
 
