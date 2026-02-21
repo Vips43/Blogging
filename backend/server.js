@@ -21,13 +21,12 @@ app.use(cors());
 app.use(express.json());
 
 const data_path = path.resolve(__dirname, 'data', 'data.json');
-const PUBLIC_IMAGES_PATH = path.join(process.cwd(), 'public', 'images');
+app.use("/images", express.static(path.resolve(__dirname, 'public', 'images')));
 
 app.get("/temple", (req, res) => {
     return res.json(data_path)
 })
 
-app.use("/images", express.static(PUBLIC_IMAGES_PATH))
 
 
 app.get("/api/temple", (req, res) => {
