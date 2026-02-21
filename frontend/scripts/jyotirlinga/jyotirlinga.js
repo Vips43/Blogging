@@ -1,19 +1,21 @@
 import { fetchJyotirlingaa } from "../apis.js";
 
 const temples_container = document.getElementById("temples_container");
+
 const BASE_URL =
   window.location.hostname === "localhost"
     ? "http://localhost:3000"
     : "https://blogging-4akb.vercel.app";
+
 async function renderTemplesCard() {
   const info = await fetchJyotirlingaa();
   if (!info || !info.jyotirlings) {
-  console.error("Invalid API response");
-  return;
-}
+    console.error("Invalid API response");
+    return;
+  }
   const { jyotirlings, data } = info
   temples_container.innerHTML = ``
-  
+
   const obeserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -21,7 +23,7 @@ async function renderTemplesCard() {
         obeserver.unobserve(entry.target);
       }
     })
-  },{threshold:0.3})
+  }, { threshold: 0.3 })
 
   const frag = document.createDocumentFragment();
 

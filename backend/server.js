@@ -7,31 +7,40 @@ import fs from "fs";
 const app = express();
 const port = process.env.PORT || 3000;
 
-const _filename = fileURLToPath(import.meta.url);
-const _dirname = path.dirname(_filename);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 //serve frontend
-app.use(express.static(path.join(_dirname, "..", "frontend")));
+app.use(express.static(path.join(__dirname, "..", "frontend")));
 app.get("/", (req, res) => {
-    res.sendFile(path.join(_dirname, "..", "frontend", "index.html"))
+    res.sendFile(path.join(__dirname, "..", "frontend", "index.html"))
 })
 
 app.use(cors());
 app.use(express.json());
 
-const data_path = './data/data.json';
+const data_path = path.join(process.cwd(), 'data', 'data.json');
+const PUBLIC_IMAGES_PATH = path.join(process.cwd(), 'public', 'images');
 
-app.use("/images", express.static(path.join(_dirname, "/public/images")))
+app.get("/temple", (req, res) => {
+    return res.json(data_path)
+})
+
+app.use("/images", express.static(PUBLIC_IMAGES_PATH))
 app.get("/api/temple", (req, res) => {
     fs.readFile(data_path, "utf8", (err, data) => {
         if (err) {
-            return res.status(500).json({ error: "could not read data" });
+            console.error("File Read Error. Path searched:", data_path);
+            return res.status(500).json({
+                error: "could not read data",
+                debugPath: data_path // Temporary for debugging
+            });
         }
         try {
             res.json(JSON.parse(data));
             console.log("temple data parsed successfully")
-        } catch {
-            res.status(500).json({ error: "invalid json file" });
+        } catch (parseErr) {
+            res.status(500).json({ error: "invalid json file", parseErr });
         }
     })
 })
