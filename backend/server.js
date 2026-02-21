@@ -10,7 +10,6 @@ const port = process.env.PORT || 3000;
 const _filename = fileURLToPath(import.meta.url);
 const _dirname = path.dirname(_filename);
 
-
 //serve frontend
 app.use(express.static(path.join(_dirname, "..", "frontend")));
 app.get("/", (req, res) => {

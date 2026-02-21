@@ -3,7 +3,7 @@ import path from "path";
 
 export default function handler(req, res) {
   try {
-    const filePath = path.join(process.cwd(), "data", "data.json");
+    const filePath = path.join( "data", "data.json");
     const data = fs.readFileSync(filePath, "utf8");
     res.status(200).json(JSON.parse(data));
   } catch (err) {
