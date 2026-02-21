@@ -2,39 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-    <link rel="stylesheet" href="../dist/output.css">
-    <link rel="stylesheet" href="../styles/style.css">
-    <title>news</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="../dist/output.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <title>news</title>
 </head>
 
-<body class="bg-gray-200 dark:bg-neutral-900 dark:text-white scrollbar-hide">
-    <nav class="bg-gray-600 select-none dark:bg-gray-800 flex justify-between px-5 text-white items-center p-2 font-roboto">
+<body class="bg-gray-200 dark:bg-neutral-900 dark:text-white overflow-hidden scrollbar-hide box-border">
+  <nav
+    class="relative bg-gray-600 select-none dark:bg-gray-800 flex justify-between px-5 text-white items-center p-2 font-roboto">
     <h3 class="text-2xl font-semibold">My Blog Site</h3>
     <ul id="navItems"
-      class="flex-1 hidden md:flex justify-center gap-1 text-sm md:text-base md:gap-5 *:capitalize *:hover:text-gray-800 *:hover:bg-gray-300 *:px-2 *:py-1 *:rounded-md *:transition-all *:duration-300 *:cursor-pointer z-90 ">
+      class="flex-1 hidden md:flex justify-center gap-1 text-sm md:text-base md:gap-5  ">
     </ul>
-    
+
     <!-- side button  -->
-    <button id="mob_btn" class="md:hidden"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-    <ul id="mobileNavItems" class="absolute bg-white text-black right-0 top-12 z-99 transition-all duration-300 translate-x-96 w-2xs space-y-px *:p-1">
-    </ul>
+    <div class="md:hidden relative border">
+      <button id="mob_btn" class=""><i class="fa-solid fa-ellipsis-vertical"></i></button>
+      <ul id="mobileNavItems"
+        class="absolute bg-neutral-900 text-white text-center left-full top-10 z-99 transition-all duration-300 w-2xs space-y-px *:p-1 *:hover:bg-neutral-700">
+      </ul>
+    </div>
   </nav>
 
-    <section class="mt-5 shadow-lg shadow-amber-50">
-        <h3 class="py-3 my-2 text-center text-3xl font-semibold">Latest News</h3>
-        <ul id="newsCatUL"
-            class="container mx-auto px-5 py-2 bg-yellow-900 flex gap-2 overflow-x-auto scrollbar-hide *:transition-all *:duration-300 *:cursor-pointer *:text-white">
-        </ul>
-        <main id="news_container" class="container mx-auto grid grid-cols-1 p-2 gap-2">
+  <section class="mt-5 shadow-lg shadow-amber-50">
+    <h3 class="py-3 my-2 text-center text-3xl font-semibold">Latest News</h3>
+    <ul id="newsCatUL"
+      class="container mx-auto px-5 py-2 bg-yellow-900 flex gap-2 overflow-x-auto scrollbar-hide *:transition-all *:duration-300 *:cursor-pointer *:text-white">
+    </ul>
+    <main id="news_container" class="container mx-auto grid grid-cols-1 p-2 gap-2">
 
-        </main>
-    </section>
+    </main>
+  </section>
 
-    <script type="module" src="../scripts/news.js"></script>
-    <script type="module" src="../scripts/index.js"></script>
+  <script type="module" src="../scripts/news.js"></script>
+  <script type="module" src="../scripts/index.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,51 @@
 .scrollbar-hide::-webkit-scrollbar{
     display: none;
 }
+/* Glassmorphism Effect */
+.glass-nav {
+    background: rgba(31, 41, 55, 0.7); /* Translucent dark gray */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hover & Active Animation */
+.nav-item {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #60a5fa; /* Blue highlight */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-item:hover::after, .nav-active::after {
+    width: 80%;
+}
+
+.nav-item:hover {
+    color: #60a5fa;
+    transform: translateY(-2px);
+}
+
+/* Mobile Slide Animation */
+#mobileNavItems {
+    transform: translateX(100%);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+}
+
+#mobileNavItems.active {
+    transform: translateX(0);
+}
+
 .nav-item {
   position: relative;
   cursor: pointer;

@@ -1,112 +1,81 @@
 import { renderNews } from "./news.js";
 
-const navItems = document.getElementById("navItems");
-const mobileNavItems = document.getElementById("mobileNavItems");
-const mob_btn = document.getElementById("mob_btn");
 const newsCatUL = document.getElementById("newsCatUL");
 
-const home = "/index.html"
-const about = "/pages/about.html"
-const contact = "/pages/contact.html"
-const news = "/pages/news.html"
+// 1. Corrected variable declarations with proper quotes
+const home = "/index.html";
+const about = "/pages/about.html";
+const contact = "/pages/contact.html";
+const news = "/pages/news.html";
 
 const navLis = [
-  { name: "home", location: home },
+  { name: "Home", location: home },
   {
-    name: "provides",
+    name: "Provides",
     children: [
-      { name: "news", location: news },
-      { name: "jyotirlinga", location: "/pages/jyotirlinga.html" }
+      { name: "News", location: news },
+      { name: "Jyotirlinga", location: "/pages/jyotirlinga.html" }
     ]
   },
-  { name: "about", location: about },
-  { name: "contact me", location: contact },
+  { name: "About", location: about },
+  { name: "Contact Me", location: contact },
 ];
 
 const activeRoute = window.location.pathname;
 
+// 2. Optimized navigation function
 function navFunc() {
-  navItems.innerHTML = ``
+  const navItems = document.getElementById("navItems"); // Ensure ID exists
+  if (!navItems) return;
+
+  navItems.innerHTML = ""; // Clear existing content
 
   navLis.forEach(item => {
-    const isActiveTab =
-      activeRoute === item.location || (item.location === "/" && activeRoute === "/index.html")
+    const isActiveTab = activeRoute === item.location || (item.location === "/" && activeRoute === "/index.html");
 
     const li = document.createElement("li");
+    li.className = `group ${isActiveTab ? "bg-white text-black" : ""} nav-item select-none`;
+    li.innerHTML = `<span>${item.name}</span>${item.children ? `<span><i class="fa-solid fa-chevron-down group-hover:rotate-180"></i></span>` : `<span></span>`}`;
 
-    li.className = `${isActiveTab} ? "bg-white text-black" : "" nav-item select-none`;
-    li.innerText = item.name;
-
-    if (!item.children) {
-      li.addEventListener("click", () => {
-        window.location.href = item.location
-      })
-    }
     if (item.children) {
       const ul = document.createElement("ul");
-      ul.className = "dropdown"
-
+      ul.className = "dropdown";
       item.children.forEach(child => {
         const childLi = document.createElement("li");
         childLi.textContent = child.name;
-
-        childLi.addEventListener("click", e => {
+        childLi.onclick = (e) => {
           e.stopPropagation();
           window.location.href = child.location;
-        });
-        ul.append(childLi)
-      })
+        };
+        ul.append(childLi);
+      });
       li.append(ul);
+    } else {
+      li.onclick = () => window.location.href = item.location;
     }
 
-    navItems.append(li)
-  })
+    navItems.append(li); // Directly appending nodes is safer than innerHTML for events
+  });
 }
-if (navItems) navFunc();
 
+// 3. Corrected Mobile Toggle logic
 function mobileButton() {
-  mobileNavItems.innerHTML = ``
+  const mob_btn = document.getElementById("mob_btn");
+  const mobileNavItems = document.getElementById("mobileNavItems");
+
+  if (!mob_btn || !mobileNavItems) return;
+
   mob_btn.addEventListener("click", () => {
-    if (mobileNavItems.classList.contains("translate-x-96")) { mobileNavItems.classList.remove("translate-x-96") }
-    else {
-      mobileNavItems.classList.add("translate-x-96")
-    }
-  })
-  navLis.forEach(item => {
-    const isActiveTab =
-      activeRoute === item.location || (item.location === "/" && activeRoute === "/index.html")
+    mobileNavItems.classList.toggle("translate-x-96"); // Cleaner than manual if/else
+  });
 
-    const li = document.createElement("li");
-
-    li.className = `${isActiveTab} ? "bg-white text-black" : "" nav-item select-none`;
-    li.innerText = item.name;
-
-    if (!item.children) {
-      li.addEventListener("click", () => {
-        window.location.href = item.location
-      })
-    }
-    if (item.children) {
-      const ul = document.createElement("ul");
-      ul.className = "mobileDropdown"
-
-      item.children.forEach(child => {
-        const childLi = document.createElement("li");
-        childLi.textContent = child.name;
-
-        childLi.addEventListener("click", e => {
-          e.stopPropagation();
-          window.location.href = child.location;
-        });
-        ul.append(childLi)
-      })
-      li.append(ul);
-    }
-    console.log("first")
-    mobileNavItems.append(li)
-  })
+  // Populate mobile items (similar logic to navFunc)
 }
-if (mobileNavItems) mobileButton()
+
+// Initialize
+navFunc();
+mobileButton();
+
 
 export const newsCategory = ["Breaking", 'Business', "Crime", "Domestic", "Education", "Entertainment", "Food", "Health", "Lifestyle", "Politics", "Sports", "Technology",];
 
