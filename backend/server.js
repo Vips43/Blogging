@@ -21,7 +21,13 @@ app.use(cors());
 app.use(express.json());
 
 const data_path = path.resolve(__dirname, 'data', 'data.json');
-app.use("/images", express.static(path.resolve(__dirname, 'public', 'images')));
+app.use("/images", express.static(path.join(process.cwd(), "public", "images"), {
+    setHeaders: (res, path) => {
+        if (path.endsWith('.avif')) {
+            res.setHeader('Content-Type', 'image/avif');
+        }
+    }
+}));
 
 app.get("/temple", (req, res) => {
     return res.json(data_path)
