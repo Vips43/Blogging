@@ -36,15 +36,7 @@
     transform: translateY(-2px);
 }
 
-/* Mobile Slide Animation */
-#mobileNavItems {
-    transform: translateX(100%);
-    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
-}
 
-#mobileNavItems.active {
-    transform: translateX(0);
-}
 
 .nav-item {
   position: relative;
@@ -59,7 +51,7 @@
   background: grey;
   list-style: none;
   border-radius: 5px;
-  font-size: .85rem;
+  font-size: 1rem;
   color: white;
 }
 .dropdown li{
@@ -78,8 +70,9 @@
     background: #fff;
     color: black;
 }
-.nav-item:hover .dropdown {
-  display: block;
+.dropdown.active{
+    display: block;
+    border-bottom: 1px solid #60a5fa;
 }
 .article:nth-child(odd){
     opacity: 0;

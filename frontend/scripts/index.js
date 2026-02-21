@@ -34,8 +34,8 @@ function navFunc() {
     const isActiveTab = activeRoute === item.location || (item.location === "/" && activeRoute === "/index.html");
 
     const li = document.createElement("li");
-    li.className = `group ${isActiveTab ? "bg-white text-black" : ""} nav-item select-none`;
-    li.innerHTML = `<span>${item.name}</span>${item.children ? `<span><i class="fa-solid fa-chevron-down group-hover:rotate-180"></i></span>` : `<span></span>`}`;
+    li.className = `space-x-1 ${isActiveTab ? "bg-white text-black" : ""} nav-item select-none`;
+    li.innerHTML = `<span>${item.name}</span>${item.children ? `<span><i class="fa-solid fa-chevron-down text-sm"></i></span>` : `<span></span>`}`;
 
     if (item.children) {
       const ul = document.createElement("ul");
@@ -50,11 +50,17 @@ function navFunc() {
         ul.append(childLi);
       });
       li.append(ul);
+      li.onclick = (e) => { e.stopPropagation; ul.classList.toggle("active") }
+      document.addEventListener("click", (e) => {
+        if (!li.contains(e.target)) {
+          ul.classList.remove("active")
+        }
+      })
     } else {
       li.onclick = () => window.location.href = item.location;
     }
 
-    navItems.append(li); // Directly appending nodes is safer than innerHTML for events
+    navItems.append(li);
   });
 }
 
@@ -68,9 +74,57 @@ function mobileButton() {
   mob_btn.addEventListener("click", () => {
     mobileNavItems.classList.toggle("translate-x-96"); // Cleaner than manual if/else
   });
+  mobileNavItems.innerHTML = navLis
+    .map(item => {
+      if (item.children) {
+        return `
+          <li class="mobile-parent cursor-pointer p-2 hover:bg-neutral-700">
+            <div class="flex justify-center gap-2 items-center">
+              <span>${item.name}</span>
+              <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+            </div>
+            <ul class="mobile-sub hidden bg-neutral-600 pl-4">
+              ${item.children
+            .map(
+              ch => `
+                <li class="p-2 hover:bg-neutral-500"
+                    onclick="navigateTo('${ch.location}')">
+                  ${ch.name}
+                </li>`
+            )
+            .join("")}
+            </ul>
+          </li>
+        `;
+      } else {
+        return `
+          <li class="cursor-pointer p-2 hover:bg-neutral-700"
+              onclick="navigateTo('${item.location}')">
+            ${item.name}
+          </li>
+        `;
+      }
+    })
+    .join("");
+  const parents = mobileNavItems.querySelectorAll(".mobile-parent");
 
-  // Populate mobile items (similar logic to navFunc)
+  parents.forEach(parent => {
+    parent.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const sub = parent.querySelector(".mobile-sub");
+      const icon = parent.querySelector("i");
+
+      sub.classList.toggle("hidden");
+      icon.classList.toggle("rotate-180");
+    });
+  });
+
 }
+window.navigateTo = function (location) {
+  if (location) {
+    window.location.href = location;
+  }
+};
 
 // Initialize
 navFunc();
