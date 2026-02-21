@@ -279,7 +279,10 @@
 
   {
    "id": "mahakaleshwar",
-   "name": { "en": "Shri Mahakaleshwar Temple", "hi": "श्री महाकालेश्वर मंदिर" },
+   "name": {
+    "en": "Shri Mahakaleshwar Temple",
+    "hi": "श्री महाकालेश्वर मंदिर"
+   },
    "seo": {
     "title": "Mahakaleshwar Jyotirlinga Travel Guide",
     "description": "Complete Mahakaleshwar temple darshan guide with travel plan, stay, cost and routes."
@@ -293,7 +296,7 @@
    "images": [
     "/images/jyotirlinga/mahakaleshwar/mahakal-temple.jpg",
     "/images/jyotirlinga/mahakaleshwar/mahakal-lingam.jfif",
-    "/images/jyotirlinga/mahakaleshwar/shri-mahakaleshwar-night.jpg"
+    "/images/jyotirlinga/mahakaleshwar/shri-mahakaleshwar-temple.jpg"
    ],
    "about": {
     "en": {
@@ -403,7 +406,10 @@
 
   {
    "id": "omkareshwar",
-   "name": { "en": "Shri Omkareshwar Jyotirlinga", "hi": "श्री ओंकारेश्वर ज्योतिर्लिंग" },
+   "name": {
+    "en": "Shri Omkareshwar Jyotirlinga",
+    "hi": "श्री ओंकारेश्वर ज्योतिर्लिंग"
+   },
    "seo": {
     "title": "Omkareshwar Jyotirlinga Travel Guide",
     "description": "Complete Omkareshwar temple darshan guide with travel plan, stay, cost and routes."
@@ -417,7 +423,7 @@
    "images": [
     "/images/jyotirlinga/mahakaleshwar/mahakal-temple.jpg",
     "/images/jyotirlinga/mahakaleshwar/mahakal-lingam.jfif",
-    "/images/jyotirlinga/mahakaleshwar/shri-mahakaleshwar-night.jpg"
+    "/images/jyotirlinga/mahakaleshwar/shri-mahakaleshwar-temple.jpg"
    ],
    "about": {
     "en": {
@@ -581,7 +587,13 @@
     "dress_code": {
      "men": "While there is no strict dress code, visitors are advised to wear modest clothing that covers arms and legs out of respect.",
      "women": "While there is no strict dress code, visitors are advised to wear modest clothing that covers arms and legs out of respect.",
-     "prohibited": ["Photography & Videography","Alcohol","cigarettes","leather items","non-vegetarian food"]
+     "prohibited": [
+      "Photography & Videography",
+      "Alcohol",
+      "cigarettes",
+      "leather items",
+      "non-vegetarian food"
+     ]
     }
    },
    "travel": {
@@ -800,7 +812,10 @@
 
   {
    "id": "kashi_vishwanath",
-   "name": { "en": "Shri Kashi Vishwanath Temple", "hi": "श्री काशी विश्वनाथ मंदिर" },
+   "name": {
+    "en": "Shri Kashi Vishwanath Temple",
+    "hi": "श्री काशी विश्वनाथ मंदिर"
+   },
    "seo": {
     "title": "Shri Kashi Vishwanath Jyotirlinga Travel Guide",
     "description": "Complete Kashi Vishwanath temple darshan guide with travel plan, stay, cost and routes."
@@ -812,11 +827,9 @@
     "google_maps": "https://www.google.com/maps/search/Kashi+Vishwanath+Temple"
    },
    "images": [
-    "/images/jyotirlinga/Kash-Vishwanath/Kashi-Vishwanath-Temple-1890.webp",
     "/images/jyotirlinga/Kash-Vishwanath/kashi-temple.jpg",
-    "/images/jyotirlinga/Kashi-Vishwanath/Kashi-Vishwanath-lingam.jfif",
-    "/images/jyotirlinga/Kash-Vishwanath/lingam.jfif",
-    "/images/jyotirlinga/Kashi-Vishwanath/kashi-vishwanath-corridor.avif"
+    "/images/jyotirlinga/Kash-Vishwanath/Kashi-Vishwanath-Temple-1890.webp",
+    "/images/jyotirlinga/Kash-Vishwanath/lingam.jfif"
    ],
    "about": {
     "en": {
@@ -938,7 +951,10 @@
 
   {
    "id": "trimbakeshwar",
-   "name": { "en": "Shri Trimbakeshwar Temple", "hi": "श्री त्र्यंबकेश्वर मंदिर" },
+   "name": {
+    "en": "Shri Trimbakeshwar Temple",
+    "hi": "श्री त्र्यंबकेश्वर मंदिर"
+   },
    "seo": {
     "title": "Trimbakeshwar Jyotirlinga Travel Guide",
     "description": "Complete Trimbakeshwar temple darshan guide with travel plan, stay, cost and routes."
@@ -1071,7 +1087,10 @@
 
   {
    "id": "vaidyanath",
-   "name": { "en": "Baba Vaidyanath Jyotirlinga", "hi": "श्री बाबा बैद्यनाथ मंदिर" },
+   "name": {
+    "en": "Baba Vaidyanath Jyotirlinga",
+    "hi": "श्री बाबा बैद्यनाथ मंदिर"
+   },
    "seo": {
     "title": "Baba Vaidyanath Jyotirlinga Travel Guide",
     "description": "Complete Vaidyanath temple darshan guide with travel plan, stay, cost and routes."
@@ -1350,7 +1369,10 @@
 
   {
    "id": "rameshwaram",
-   "name": { "en": "Shri Ramanathaswamy Temple", "hi": "श्री रामानथस्वामी मंदिर" },
+   "name": {
+    "en": "Shri Ramanathaswamy Temple",
+    "hi": "श्री रामानथस्वामी मंदिर"
+   },
    "seo": {
     "title": "Ramanathaswamy Temple Travel Guide",
     "description": "Complete Rameshwaram temple darshan guide with travel plan, stay, cost and routes."

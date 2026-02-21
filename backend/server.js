@@ -20,6 +20,11 @@ app.use(cors());
 app.use(express.json());
 
 const data_path = './data/data.json';
+
+app.get("/temple",async(req,res)=>{
+    return res.json(data_path)
+})
+
 app.use("/images", express.static(path.join(_dirname, "/public/images")))
 app.get("/api/temple", (req, res) => {
     fs.readFile(data_path, "utf8", (err, data) => {
@@ -51,10 +56,10 @@ const api_key = '91d80201-d045-4495-b89a-24f6d834710e';
 const news_Api_key = 'pub_e8ae66892e2d493086df2d385316465d';
 
 function baseUrl() {
-    return 'https://appi.cricapi.com';
+    return 'https://api.cricapi.com';
 }
 
-async function fetchGlobal(params, key, expiry = 10*6*1000) {
+async function fetchGlobal(params, key, expiry = 10 * 6 * 1000) {
     const cached = cache[key];
 
     if (cached && Date.now() - cached.timestamp < expiry) {
@@ -91,10 +96,9 @@ async function fetchNewsBackend(cat) {
         console.log("Loaded news from cache", cat);
         return newsCache[cat].data;
     }
-
-
     try {
         const query = encodeURIComponent("all latest news from india");
+
         const url = `https://newsdata.io/api/1/latest?apikey=${news_Api_key}&q=${query}&category=${cat}`;
         const res = await fetch(url);
         const data = await res.json();
