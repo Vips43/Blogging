@@ -34,7 +34,7 @@
     "google_maps": "https://maps.google.com/?q=Somnath+Temple"
    },
    "images": [
-    "/images/jyotirlinga/Somnath/Somnath-temple.avif",
+    "/images/jyotirlinga/Somnath/Somnath-temple.AVIF",
     "/images/jyotirlinga/Somnath/Somnath-temple.jfif",
     "/images/jyotirlinga/Somnath/Somnath-temple.jpg",
     "/images/jyotirlinga/Somnath/somnathtemple-lingam.jpg",
@@ -279,7 +279,7 @@
 
   {
    "id": "mahakaleshwar",
-   "name": { "en": "Mahakaleshwar", "hi": "महाकालेश्वर" },
+   "name": { "en": "Shri Mahakaleshwar Temple", "hi": "श्री महाकालेश्वर मंदिर" },
    "seo": {
     "title": "Mahakaleshwar Jyotirlinga Travel Guide",
     "description": "Complete Mahakaleshwar temple darshan guide with travel plan, stay, cost and routes."
@@ -403,7 +403,7 @@
 
   {
    "id": "omkareshwar",
-   "name": { "en": "Omkareshwar", "hi": "ओंकारेश्वर" },
+   "name": { "en": "Shri Omkareshwar Jyotirlinga", "hi": "श्री ओंकारेश्वर ज्योतिर्लिंग" },
    "seo": {
     "title": "Omkareshwar Jyotirlinga Travel Guide",
     "description": "Complete Omkareshwar temple darshan guide with travel plan, stay, cost and routes."
@@ -577,11 +577,11 @@
      { "label": "General Darshan (Evening)", "time": "5:00 PM – 7:00 PM" }
     ],
     "booking_link": "https://registration.uk.gov.in",
-    "process": "Biometric registration mandatory for Char Dham Yatra.",
+    "process": "• Online Portal: Register on the official Uttarakhand Tourist Care website. <br>• WhatsApp: Send 'YATRA' to +91 8394833833 to initiate automated registration. <br>• Offline Counters: Physical counters are available at locations like Haridwar, Rishikesh, Sonprayag, and Gaurikund. <br>• Required Documents: A valid Government ID (Aadhaar, Voter ID, Passport, or Driving License) and a recent passport-sized photograph.",
     "dress_code": {
      "men": "While there is no strict dress code, visitors are advised to wear modest clothing that covers arms and legs out of respect.",
      "women": "While there is no strict dress code, visitors are advised to wear modest clothing that covers arms and legs out of respect.",
-     "prohibited": []
+     "prohibited": ["Photography & Videography","Alcohol","cigarettes","leather items","non-vegetarian food"]
     }
    },
    "travel": {
@@ -613,15 +613,15 @@
      },
      {
       "label": "Day 3",
-      "text": "Trek to Kedarnath. <br>Early morning, drive to Gaurikund, take warm water natural bath at Gaurikunda, then start the 16 km trek to Kedarnath (or take a helicopter/pony). Reach Kedarnath in the evening for Darshan."
+      "text": "• Trek to Kedarnath. <br>• Early morning, drive to Gaurikund, take warm water natural bath at Gaurikunda, then start the 16 km trek to Kedarnath (or take a helicopter/pony). <br>• Reach Kedarnath in the evening for Darshan."
      },
      {
       "label": "Day 4",
-      "text": "After darshan visit The Bhairavnath Temple(Kaal Bhairav) in Kedarnath is located approximately 500 meters above the main Kedarnath Temple. It is considered the 'Kshetrapal' or 'Protector of the Kedar Valley'."
+      "text": "• After darshan visit The Bhairavnath Temple(Kaal Bhairav) in Kedarnath is located approximately 500 meters above the main Kedarnath Temple. <br>• It is considered the 'Kshetrapal' or 'Protector of the Kedar Valley'."
      },
      {
       "label": "Day 5",
-      "text": "Kedarnath to Guptkashi/Sitapur. Attend early morning Aarti, trek down to Gaurikund, and return to Guptkashi/Sitapur for overnight stay. and return to Home-town."
+      "text": "•Kedarnath to Guptkashi/Sitapur. <br>• Attend early morning Aarti, trek down to Gaurikund, and return to Guptkashi/Sitapur for overnight stay. and return to Home-town."
      }
     ],
     "note": "Carry medicines and warm clothing for altitude"
@@ -679,7 +679,7 @@
 
   {
    "id": "bhimashankar",
-   "name": { "en": "Bhimashankar", "hi": "भीमाशंकर" },
+   "name": { "en": "Shri Bhimashankar Temple", "hi": "श्री भीमाशंकर मंदिर" },
    "seo": {
     "title": "Bhimashankar Jyotirlinga Travel Guide",
     "description": "Complete Bhimashankar temple darshan guide with travel plan, stay, cost and routes."
@@ -800,9 +800,9 @@
 
   {
    "id": "kashi_vishwanath",
-   "name": { "en": "Kashi Vishwanath", "hi": "काशी विश्वनाथ" },
+   "name": { "en": "Shri Kashi Vishwanath Temple", "hi": "श्री काशी विश्वनाथ मंदिर" },
    "seo": {
-    "title": "Kashi Vishwanath Jyotirlinga Travel Guide",
+    "title": "Shri Kashi Vishwanath Jyotirlinga Travel Guide",
     "description": "Complete Kashi Vishwanath temple darshan guide with travel plan, stay, cost and routes."
    },
    "location": {
@@ -938,7 +938,7 @@
 
   {
    "id": "trimbakeshwar",
-   "name": { "en": "Trimbakeshwar", "hi": "त्र्यंबकेश्वर" },
+   "name": { "en": "Shri Trimbakeshwar Temple", "hi": "श्री त्र्यंबकेश्वर मंदिर" },
    "seo": {
     "title": "Trimbakeshwar Jyotirlinga Travel Guide",
     "description": "Complete Trimbakeshwar temple darshan guide with travel plan, stay, cost and routes."
@@ -1071,7 +1071,7 @@
 
   {
    "id": "vaidyanath",
-   "name": { "en": "Vaidyanath", "hi": "वैद्यनाथ" },
+   "name": { "en": "Baba Vaidyanath Jyotirlinga", "hi": "श्री बाबा बैद्यनाथ मंदिर" },
    "seo": {
     "title": "Baba Vaidyanath Jyotirlinga Travel Guide",
     "description": "Complete Vaidyanath temple darshan guide with travel plan, stay, cost and routes."
@@ -1215,7 +1215,7 @@
   },
   {
    "id": "nageshwar",
-   "name": { "en": "Nageshwar", "hi": "नागेश्वर" },
+   "name": { "en": "Shri Nageshwar Temple", "hi": "श्री नागेश्वर मंदिर" },
    "seo": {
     "title": "Nageshwar Jyotirlinga Travel Guide",
     "description": "Complete Nageshwar temple darshan guide with travel plan, stay, cost and routes."
@@ -1350,7 +1350,7 @@
 
   {
    "id": "rameshwaram",
-   "name": { "en": "Ramanathaswamy", "hi": "रामेश्वरम" },
+   "name": { "en": "Shri Ramanathaswamy Temple", "hi": "श्री रामानथस्वामी मंदिर" },
    "seo": {
     "title": "Ramanathaswamy Temple Travel Guide",
     "description": "Complete Rameshwaram temple darshan guide with travel plan, stay, cost and routes."
@@ -1498,7 +1498,7 @@
 
   {
    "id": "grishneshwar",
-   "name": { "en": "Grishneshwar", "hi": "घृष्णेश्वर" },
+   "name": { "en": "Shri Grishneshwar Temple", "hi": "श्री घृष्णेश्वर मंदिर" },
    "seo": {
     "title": "Grishneshwar Jyotirlinga Travel Guide",
     "description": "Complete Grishneshwar temple darshan guide with travel plan, stay, cost and routes."

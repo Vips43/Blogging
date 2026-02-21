@@ -56,7 +56,7 @@ function baseUrl() {
     return 'https://appi.cricapi.com';
 }
 
-async function fetchGlobal(params, key, expiry = 6000000) {
+async function fetchGlobal(params, key, expiry = 10*6*1000) {
     const cached = cache[key];
 
     if (cached && Date.now() - cached.timestamp < expiry) {
@@ -120,7 +120,7 @@ app.get(`/news/:cat`, async (req, res) => {
 })
 
 app.get((req, res) => {
-  res.sendFile(path.join(_dirname, "..", "frontend", "index.html"));
+    res.sendFile(path.join(_dirname, "..", "frontend", "index.html"));
 });
 
 app.listen(port, () => {
