@@ -3,6 +3,7 @@ import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
+import templeData from './data/data.json' with { type: 'json' };
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -19,7 +20,7 @@ app.get("/", (req, res) => {
 app.use(cors());
 app.use(express.json());
 
-const data_path = path.join(process.cwd(), 'data', 'data.json');
+const data_path = path.resolve(__dirname, 'data', 'data.json');
 const PUBLIC_IMAGES_PATH = path.join(process.cwd(), 'public', 'images');
 
 app.get("/temple", (req, res) => {
@@ -27,7 +28,19 @@ app.get("/temple", (req, res) => {
 })
 
 app.use("/images", express.static(PUBLIC_IMAGES_PATH))
+
+
 app.get("/api/temple", (req, res) => {
+    try {
+        console.log("fetched temple data from new route")
+        res.json(templeData);
+    } catch (error) {
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+
+app.get("/temple", (req, res) => {
     fs.readFile(data_path, "utf8", (err, data) => {
         if (err) {
             console.error("File Read Error. Path searched:", data_path);
@@ -45,7 +58,7 @@ app.get("/api/temple", (req, res) => {
     })
 })
 
-app.post("/api/temple", (req, res) => {
+app.post("/temple", (req, res) => {
     const newData = req.body;
 
     fs.writeFile(data_path, JSON.stringify(newData, null, 2), (err) => {
