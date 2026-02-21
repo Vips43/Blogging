@@ -4,6 +4,9 @@ const temples_container = document.getElementById("temples_container");
 
 async function renderTemplesCard() {
   const info = await fetchJyotirlingaa();
+  if(!Array.isArray(info)){
+    console.error("Invalid api response"); return;
+  }
   const { jyotirlings, data } = info
   temples_container.innerHTML = ``
   
