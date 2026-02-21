@@ -19,8 +19,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const { pilgrim_checklist, jyotirlings, data, meta } = info;
   const jyotirlinga = jyotirlings.filter(j => j.id === id)
 
-  console.log(jyotirlinga[0])
-
   if (heading) renderHeading(jyotirlinga[0]);
   if (trip_details) renderTripDetails(jyotirlinga[0]);
   if (about_temple) renderAboutTemple(jyotirlinga[0]);
