@@ -13,6 +13,11 @@ const queryStr = window.location.search;
 const urlParams = new URLSearchParams(queryStr)
 const id = urlParams.get("id")
 
+const BASE_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:3000"
+    : "https://blogging-4akb.vercel.app";
+
 document.addEventListener("DOMContentLoaded", async () => {
 
   const info = await fetchJyotirlingaa();
@@ -35,7 +40,7 @@ function renderHeading(lingam) {
   heading.className =
     "relative h-[80vh] md:h-[60vh] overflow-hidden bg-cover bg-center bg-no-repeat transition-all";
 
-  heading.style.backgroundImage = `url('${img}')`;
+  heading.style.backgroundImage = `url('${BASE_URL}${img}')`;
 
   heading.innerHTML = `
     <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-8 text-white">
