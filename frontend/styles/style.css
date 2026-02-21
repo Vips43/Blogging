@@ -36,3 +36,11 @@
 .nav-item:hover .dropdown {
   display: block;
 }
+.article:nth-child(odd){
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+}
+.article:nth-child(even){
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+}

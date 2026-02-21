@@ -4,19 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
   <link rel="stylesheet" href="dist/output.css">
   <link rel="stylesheet" href="styles/style.css">
   <title>Bloggs</title>
 </head>
 
-<body class="bg-gray-200 dark:bg-neutral-900 dark:text-white scrollbar-hide">
+<body class="bg-gray-200 dark:bg-neutral-900 dark:text-white w-screen overflow-hidden scrollbar-hide">
 
-  <nav class="bg-gray-600 select-none dark:bg-gray-800 flex justify-around items-center p-2 font-roboto">
+  <nav class="bg-gray-600 select-none dark:bg-gray-800 flex justify-between px-5 text-white items-center p-2 font-roboto">
     <h3 class="text-2xl font-semibold">My Blog Site</h3>
     <ul id="navItems"
-      class="flex-1 flex justify-center gap-1 text-sm md:text-base md:gap-5 *:capitalize *:hover:text-gray-800 *:hover:bg-gray-300 *:px-2 *:py-1 *:rounded-md *:transition-all *:duration-300 *:cursor-pointer z-90">
+      class="flex-1 hidden md:flex justify-center gap-1 text-sm md:text-base md:gap-5 *:capitalize *:hover:text-gray-800 *:hover:bg-gray-300 *:px-2 *:py-1 *:rounded-md *:transition-all *:duration-300 *:cursor-pointer z-90 ">
     </ul>
-    <button class="bg-gray-300 px-2 py-1 text-gray-700 rounded-md ">SignIn</button>
+    
+    <!-- side button  -->
+    <button id="mob_btn" class="md:hidden"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+    <ul id="mobileNavItems" class="absolute bg-white text-black right-0 top-12 z-99 transition-all duration-300 translate-x-96 w-2xs space-y-px *:p-1">
+      <li>about</li>
+      <li>about</li>
+      <li>about</li>
+      <li>about</li>
+    </ul>
   </nav>
 
   <section class="h-full">

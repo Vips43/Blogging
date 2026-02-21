@@ -1,6 +1,8 @@
 import { renderNews } from "./news.js";
 
 const navItems = document.getElementById("navItems");
+const mobileNavItems = document.getElementById("mobileNavItems");
+const mob_btn = document.getElementById("mob_btn");
 const newsCatUL = document.getElementById("newsCatUL");
 
 const home = "/index.html"
@@ -21,9 +23,9 @@ const navLis = [
   { name: "contact me", location: contact },
 ];
 
+const activeRoute = window.location.pathname;
 
 function navFunc() {
-  const activeRoute = window.location.pathname;
   navItems.innerHTML = ``
 
   navLis.forEach(item => {
@@ -35,20 +37,20 @@ function navFunc() {
     li.className = `${isActiveTab} ? "bg-white text-black" : "" nav-item select-none`;
     li.innerText = item.name;
 
-    if(!item.children){
+    if (!item.children) {
       li.addEventListener("click", () => {
         window.location.href = item.location
       })
     }
-    if(item.children){
+    if (item.children) {
       const ul = document.createElement("ul");
       ul.className = "dropdown"
-      
-      item.children.forEach(child=>{
+
+      item.children.forEach(child => {
         const childLi = document.createElement("li");
         childLi.textContent = child.name;
 
-        childLi.addEventListener("click", e=>{
+        childLi.addEventListener("click", e => {
           e.stopPropagation();
           window.location.href = child.location;
         });
@@ -61,6 +63,50 @@ function navFunc() {
   })
 }
 if (navItems) navFunc();
+
+function mobileButton() {
+  mobileNavItems.innerHTML = ``
+  mob_btn.addEventListener("click", () => {
+    if (mobileNavItems.classList.contains("translate-x-96")) { mobileNavItems.classList.remove("translate-x-96") }
+    else {
+      mobileNavItems.classList.add("translate-x-96")
+    }
+  })
+  navLis.forEach(item => {
+    const isActiveTab =
+      activeRoute === item.location || (item.location === "/" && activeRoute === "/index.html")
+
+    const li = document.createElement("li");
+
+    li.className = `${isActiveTab} ? "bg-white text-black" : "" nav-item select-none`;
+    li.innerText = item.name;
+
+    if (!item.children) {
+      li.addEventListener("click", () => {
+        window.location.href = item.location
+      })
+    }
+    if (item.children) {
+      const ul = document.createElement("ul");
+      ul.className = "mobileDropdown"
+
+      item.children.forEach(child => {
+        const childLi = document.createElement("li");
+        childLi.textContent = child.name;
+
+        childLi.addEventListener("click", e => {
+          e.stopPropagation();
+          window.location.href = child.location;
+        });
+        ul.append(childLi)
+      })
+      li.append(ul);
+    }
+    console.log("first")
+    mobileNavItems.append(li)
+  })
+}
+if (mobileNavItems) mobileButton()
 
 export const newsCategory = ["Breaking", 'Business', "Crime", "Domestic", "Education", "Entertainment", "Food", "Health", "Lifestyle", "Politics", "Sports", "Technology",];
 

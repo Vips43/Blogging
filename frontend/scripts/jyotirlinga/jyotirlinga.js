@@ -5,13 +5,22 @@ const temples_container = document.getElementById("temples_container");
 async function renderTemplesCard() {
   const info = await fetchJyotirlingaa();
   const { jyotirlings, data } = info
-
   temples_container.innerHTML = ``
+  
+  const obeserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("article")
+        obeserver.unobserve(entry.target);
+      }
+    })
+  },{threshold:0.3})
+
   const frag = document.createDocumentFragment();
 
   jyotirlings.forEach((lingam, i) => {
     const article = document.createElement("article");
-    article.className = `bg-white dark:bg-neutral-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-700 group opacity-0 translate-y-10`;
+    article.className = `article bg-white dark:bg-neutral-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-1000 group`;
 
     article.innerHTML = `
     <!-- Image -->
@@ -22,7 +31,7 @@ async function renderTemplesCard() {
         <img src="${img}" alt="${lingam.name.en}" loading="lazy"
         class=" object-fill h-full w-full mx-auto transition duration-200" />
       </div>`
-      ))}
+    ))}
       </div>
         <!-- Tag -->
         <span class="absolute top-3 left-3 bg-black/70 text-white text-xs px-3 py-1 rounded-full">
@@ -70,10 +79,9 @@ async function renderTemplesCard() {
       </div>
         `
     frag.append(article)
-    setTimeout(() => {
-      article.classList.remove("opacity-0", "translate-y-10")
-    }, 30 * i);
+    obeserver.observe(article)
   });
   temples_container.append(frag)
 }
 renderTemplesCard();
+
