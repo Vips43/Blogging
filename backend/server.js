@@ -27,8 +27,6 @@ app.get("/temple", (req, res) => {
     return res.json(data_path)
 })
 
-
-
 app.get("/api/temple", (req, res) => {
     try {
         console.log("fetched temple data from new route")
@@ -37,25 +35,6 @@ app.get("/api/temple", (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
-
-
-app.get("/temple", (req, res) => {
-    fs.readFile(data_path, "utf8", (err, data) => {
-        if (err) {
-            console.error("File Read Error. Path searched:", data_path);
-            return res.status(500).json({
-                error: "could not read data",
-                debugPath: data_path // Temporary for debugging
-            });
-        }
-        try {
-            res.json(JSON.parse(data));
-            console.log("temple data parsed successfully")
-        } catch (parseErr) {
-            res.status(500).json({ error: "invalid json file", parseErr });
-        }
-    })
-})
 
 app.post("/temple", (req, res) => {
     const newData = req.body;
