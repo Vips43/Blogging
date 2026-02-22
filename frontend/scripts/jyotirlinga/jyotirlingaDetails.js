@@ -16,7 +16,7 @@ const id = urlParams.get("id")
 const BASE_URL =
   window.location.hostname === "localhost"
     ? "http://localhost:3000"
-    : "https://blogging-4akb.vercel.app";
+    : "bloggingbackend.vercel.app";
 
 document.addEventListener("DOMContentLoaded", async () => {
 

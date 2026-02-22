@@ -29,7 +29,7 @@ export async function fetchJyotirlingaa() {
     const BASE_URL =
         window.location.hostname === "localhost"
             ? "http://localhost:3000"
-            : "https://blogging-4akb.vercel.app";
+            : "bloggingbackend.vercel.app";
     const res = await fetch(`${BASE_URL}/api/temple`);
     const data = await res.json();
     const jyotirlings = data?.jyotirlings;

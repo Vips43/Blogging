@@ -5,7 +5,7 @@ const temples_container = document.getElementById("temples_container");
 const BASE_URL =
   window.location.hostname === "localhost"
     ? "http://localhost:3000"
-    : "https://blogging-4akb.vercel.app";
+    : "bloggingbackend.vercel.app";
 
 async function renderTemplesCard() {
   const info = await fetchJyotirlingaa();
@@ -23,7 +23,7 @@ async function renderTemplesCard() {
         obeserver.unobserve(entry.target);
       }
     })
-  }, { threshold: 0.2 })
+  }, { threshold: 0.1 })
 
   const frag = document.createDocumentFragment();
 
