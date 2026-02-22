@@ -23,8 +23,8 @@ app.use(express.json());
 const data_path = path.resolve(__dirname, 'data', 'data.json');
 app.use("/images", express.static(path.join(process.cwd(),"public", "images"), {
     setHeaders: (res, path) => {
+        console.log("serving img path :",path)
         if (path.endsWith('.avif')) {
-            console.log("serving img path :",path)
             res.setHeader('Content-Type', 'image/avif');
         }
     }
