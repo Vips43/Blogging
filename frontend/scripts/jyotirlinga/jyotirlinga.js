@@ -23,7 +23,7 @@ async function renderTemplesCard() {
         obeserver.unobserve(entry.target);
       }
     })
-  }, { threshold: 0.3 })
+  }, { threshold: 0.2 })
 
   const frag = document.createDocumentFragment();
 
@@ -40,7 +40,7 @@ async function renderTemplesCard() {
         <img src="${BASE_URL}${img}" alt="${lingam.name.en}" loading="lazy"
         class=" object-fill h-full w-full mx-auto transition duration-200" />
       </div>`
-    ))}
+    )).join("")}
       </div>
         <!-- Tag -->
         <span class="absolute top-3 left-3 bg-black/70 text-white text-xs px-3 py-1 rounded-full">

@@ -75,10 +75,10 @@
     border-bottom: 1px solid #60a5fa;
 }
 .article:nth-child(odd){
-    opacity: 0;
-    transform: translateY(20px) scale(0.8);
+    opacity: 0.4;
+    transform: translateY(10px) scale(0.9);
 }
 .article:nth-child(even){
-    opacity: 0;
-    transform: translateY(20px) scale(0.8);
+    opacity: 0.4;
+    transform: translateY(10px) scale(0.9);
 }
