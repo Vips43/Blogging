@@ -19,7 +19,7 @@ export async function renderNews(cat) {
     const BASE_URL =
       window.location.hostname === "localhost"
         ? "http://localhost:3000"
-        : "bloggingbackend.vercel.app";
+        : "https://bloggingbackend.vercel.app";
 
     const res = await fetch(`${BASE_URL}/news/${cat}`, { signal: newsController.signal })
 

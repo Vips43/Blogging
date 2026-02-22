@@ -5,7 +5,7 @@ const temples_container = document.getElementById("temples_container");
 const BASE_URL =
   window.location.hostname === "localhost"
     ? "http://localhost:3000"
-    : "bloggingbackend.vercel.app";
+    : "https://bloggingbackend.vercel.app";
 
 async function renderTemplesCard() {
   const info = await fetchJyotirlingaa();
@@ -37,7 +37,7 @@ async function renderTemplesCard() {
       <div class="w-full h-52 flex overflow-x-auto overflow-y-hidden scrollbar-hide snap-x snap-mandatory">
       ${lingam.images.map(img => (
       `<div class="shrink-0 h-48 snap-end w-full content-center">
-        <img src="${BASE_URL}${img}" alt="${lingam.name.en}" loading="lazy"
+        <img src="${img}" alt="${lingam.name.en}" loading="lazy"
         class=" object-fill h-full w-full mx-auto transition duration-200" />
       </div>`
     )).join("")}
