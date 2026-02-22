@@ -21,7 +21,7 @@ app.use(cors());
 app.use(express.json());
 
 const data_path = path.resolve(__dirname, 'data', 'data.json');
-app.use("/images", express.static(path.join(process.cwd(),"public", "images"), {
+app.use("/images", express.static(path.join(process.cwd(),"..", "frontend", "images"), {
     setHeaders: (res, path) => {
         console.log("serving img path :",path)
         if (path.endsWith('.avif')) {
