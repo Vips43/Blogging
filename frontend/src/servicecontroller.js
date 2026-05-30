@@ -1,72 +1,81 @@
-export const newRegularService = async (req, res) => {
-  const { id } = req.params;
+const ExcelJS = require('exceljs');
 
-  try {
-    const location = await Location.findById(id);
+async function fillNestedExcelTemplate() {
+  const workbook = new ExcelJS.Workbook();
+  await workbook.xlsx.readFile('template.xlsx');
+  const worksheet = workbook.getWorksheet(1); 
 
-    if (!location) {
-      return res.status(404).json({ msg: "Location not found" });
+  // Your nested data structure
+  const branchesData = [
+    {
+      branch: 'Mumbai Main',
+      subbranches: [
+        { subbranch: 'Borivali West', categories: ['Retail Banking', 'Corporate Services', 'Loan Department'] },
+        { subbranch: 'Andheri East', categories: ['Retail Banking', 'Wealth Management'] }
+      ]
+    },
+    {
+      branch: 'Delhi Central',
+      subbranches: [
+        { subbranch: 'Connaught Place', categories: ['Corporate Services', 'NRI Banking'] }
+      ]
     }
+  ];
 
-    // PARSE DATA — service is now a full array, all fields keyed by name
-    const services = JSON.parse(req.body.service);
-    const usedCalibration = JSON.parse(req.body.usedCalibration || "{}");
-    const action = JSON.parse(req.body.action || "{}");
-    const comment = JSON.parse(req.body.comment || "{}");
+  let currentRow = 5; // Starting row in your template below the logo/header
 
-    // BUILD regularService array — one entry per service
-    const regularServiceArray = await Promise.all(
-      services.map(async (service) => {
-        // Upload up to 2 images per service: image_<serviceName>_0, image_<serviceName>_1
-        const imageLinks = await Promise.all(
-          [0, 1].map(async (i) => {
-            const fileKey = `image_${service.serviceName}_${i}`;
-            const file = req.files?.[fileKey];
-            if (!file) return null;
-            return uploadFile({ filePath: file.tempFilePath });
-          }),
-        );
+  branchesData.forEach((bItem) => {
+    const branchStartRow = currentRow;
 
-        // Filter out nulls (slots where no image was uploaded)
-        const images = imageLinks.filter(Boolean);
+    bItem.subbranches.forEach((sItem) => {
+      const subbranchStartRow = currentRow;
 
-        return {
-          serviceName: service.serviceName,
-          frequency: service.frequency,
+      sItem.categories.forEach((category) => {
+        const row = worksheet.getRow(currentRow);
+        
+        // Write values to cells
+        row.getCell(1).value = bItem.branch;
+        row.getCell(2).value = sItem.subbranch;
+        row.getCell(3).value = category;
 
-          scopes: service.scopes.map((scope) => ({
-            scopeName: scope.scopeName,
+        // Apply basic alignment so merged text sits nicely in the center
+        row.getCell(1).alignment = { vertical: 'middle', horizontal: 'center' };
+        row.getCell(2).alignment = { vertical: 'middle', horizontal: 'left' };
+        row.getCell(3).alignment = { vertical: 'middle', horizontal: 'left' };
 
-            consumables: scope.consumables.map((con) => ({
-              consumableName: con.consumableName,
-              calibration: con.calibration,
+        row.commit();
+        currentRow++;
+      });
 
-              // Look up by name (scopeName → consumableName)
-              usedCalibration:
-                usedCalibration?.[scope.scopeName]?.[con.consumableName] || "",
-
-              action: action?.[scope.scopeName]?.[con.consumableName] || "Done",
-
-              comment: comment?.[scope.scopeName]?.[con.consumableName] || "",
-            })),
-          })),
-
-          images, // array of 0-2 uploaded URLs
-          userName: req.user.name,
-        };
-      }),
-    );
-
-    await Service.create({
-      type: "Regular",
-      regularService: regularServiceArray,
-      client: location.client,
-      location: id,
+      const subbranchEndRow = currentRow - 1;
+      // Merge Sub-branch column (Column B / 2) if it spans multiple categories
+      if (subbranchStartRow < subbranchEndRow) {
+        worksheet.mergeCells(subbranchStartRow, 2, subbranchEndRow, 2);
+      }
     });
 
-    return res.status(201).json({ msg: "Service updated successfully" });
-  } catch (error) {
-    console.log(error);
-    return res.status(500).json({ msg: "Server error, try again later" });
+    const branchEndRow = currentRow - 1;
+    // Merge Branch column (Column A / 1) if it spans multiple sub-branches/categories
+    if (branchStartRow < branchEndRow) {
+      worksheet.mergeCells(branchStartRow, 1, branchEndRow, 1);
+    }
+  });
+
+  // Apply borders to all newly populated cells to keep the sheet clean
+  for (let r = 5; r < currentRow; r++) {
+    const row = worksheet.getRow(r);
+    for (let c = 1; c <= 3; c++) {
+      row.getCell(c).border = {
+        top: { style: 'thin' },
+        left: { style: 'thin' },
+        bottom: { style: 'thin' },
+        right: { style: 'thin' }
+      };
+    }
   }
-};
+
+  await workbook.xlsx.writeFile('final_hierarchical_report.xlsx');
+  console.log('Hierarchical Excel sheet generated successfully!');
+}
+
+fillNestedExcelTemplate();
